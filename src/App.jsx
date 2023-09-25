@@ -2,16 +2,17 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Home from './Page/Home'
+import Events from './Page/Events'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div className=' bg-slate-700 text-blue-600'>
-        hi
-      </div>
-    </>
+      <Routes>
+        <Route path="/" element={<Home/>} /> 
+        <Route path="/event" element={<Events/>} /> 
+      </Routes>
   )
 }
 

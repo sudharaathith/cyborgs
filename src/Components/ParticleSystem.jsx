@@ -26,9 +26,10 @@ class ParticleSystem extends Component {
         y: Math.random() * canvas.height,
         vx:(Math.random() - 0.5)*2,
         vy:(Math.random() - 0.5)*2,
-        radius: 200,
+        radius: window.innerWidth/7,
         color: 'rgba(153, 76, 0, .1)',
       });
+      console.log(window.innerWidth)
     }
   }
 
@@ -87,7 +88,7 @@ class ParticleSystem extends Component {
 
 
   render() {
-    return <canvas className=' top-0 left-0 w-screen h-screen blur-3xl fixed ' ref={this.canvasRef} />;
+    return <canvas className=' top-0 left-0 blur-3xl w-screen h-screen  fixed ' ref={this.canvasRef} />;
   }
 }
 

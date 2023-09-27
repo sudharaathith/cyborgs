@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 function NavBar() {
-    const nav = useNavigate();
+    const navg = useNavigate();
   return (
     <div className=" backdrop-blur-xl fixed top-0 w-screen bg-orange-500/5 text-orange-500  px-3 py-2 flex flex-row justify-between items-center">
       <div className=" flex flex-row mx-7">
@@ -11,10 +11,10 @@ function NavBar() {
         {/* <div className='my-auto mx-2 text-2xl font-bold font-["Poppin"]'>Cyborgs</div> */}
       </div>
       <div className="flex justify-stretch gap-5 mx-3">
-        <NavItem to='/'>Home</NavItem>
-        <NavItem to='/event' delay=".1">Event</NavItem>
-        <NavItem delay=".2">About</NavItem>
-        <NavItem delay=".3">Contact</NavItem>
+        <NavItem navg={navg} to='/'>Home</NavItem>
+        <NavItem navg={navg} to='/event' delay=".1">Event</NavItem>
+        <NavItem navg={navg} delay=".2">About</NavItem>
+        <NavItem navg={navg} delay=".3">Contact</NavItem>
         <motion.div
           initial={{ rotateZ: -360, opacity: 0, scale: 0.2 }}
         //   transition={{ delay: 0.7 }}
@@ -41,7 +41,7 @@ function NavItem(props) {
       initial={{ y: -70, rotateZ: -90 }}
       transition={{ delay: 0.3 + props.delay ? props.delay : 0 }}
       whileInView={{ y: 0, rotateZ: 0 }}
-      onClick={e=>{nav(props.to)}}
+      onClick={(e)=>{props.navg(props.to)}}
     >
       {props.children}
     </motion.div>

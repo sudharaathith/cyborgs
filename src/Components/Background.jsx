@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion'
+import ParticleSystem from './ParticleSystem';
 
 function Background(props) {
     let mouseX = useMotionValue(0);
@@ -26,14 +27,15 @@ function Background(props) {
           style={{
             background: useMotionTemplate`
               radial-gradient(
-                650px circle at ${mouseX}px ${mouseY}px,
+                300px circle at ${mouseX}px ${mouseY}px,
                 rgba(245, 128, 12, 0.15),
                 transparent 80%
               )
             `,
           }}
         />
-        <div>
+        <ParticleSystem />
+        <div className={props.className}>
          { props.children }
         </div>
       </div>

@@ -1,13 +1,15 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, useMotionTemplate, useMotionValue } from 'framer-motion'
 import NavBar from '../Components/NavBar'
+import Background from '../Components/Background'
 
 function Home() {
+  
   return (
-    <div className=' w-screen h-screen bg-[#000]'>
+    <Background>
       <NavBar />
-         
-    </div>
+    </Background>
+
   )
 }
 

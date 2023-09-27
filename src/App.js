@@ -3,15 +3,22 @@ import './App.css';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import Home from './Page/Home';
 import Event from './Page/Event';
+import Background from './Components/Background';
 
 function App() {
   return (
+    
     <BrowserRouter>
+    <Background>
       <Routes>
+      
         <Route path="/" element={<Home/>} />
         <Route path="/event" element={<Event/>} />
+        
         </Routes>
+        </Background>
     </BrowserRouter>
+    
   );
 }
 

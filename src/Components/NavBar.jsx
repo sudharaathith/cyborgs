@@ -38,7 +38,7 @@ function NavItem(props) {
   return (
     <motion.div
       className=" text-xl cursor-pointer select-none font-[zeniq] my-auto"
-      initial={{ y: -70, rotateZ: -90 }}
+      initial={{ y: -70, rotateZ: -130 }}
       transition={{ delay: 0.3 + props.delay ? props.delay : 0 }}
       whileInView={{ y: 0, rotateZ: 0 }}
       onClick={(e)=>{props.navg(props.to)}}

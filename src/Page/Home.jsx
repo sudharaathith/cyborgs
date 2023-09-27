@@ -8,13 +8,13 @@ import ParticleSystem from '../Components/ParticleSystem'
 function Home() {
   
   return (
-    <Background className="flex justify-items-center h-screen">
+    <div className="flex justify-items-center h-screen">
       
       <div className='m-auto text-white flex'>
       {/* <Counter /> */}
       <img src='/Logo512.png' className=' w-64 h-64 m-auto' />
       </div>
-    </Background>
+    </div>
 
   )
 }

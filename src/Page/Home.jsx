@@ -9,7 +9,7 @@ function Home() {
   
   return (
     <Background className="flex justify-items-center h-screen">
-      <NavBar />
+      
       <div className='m-auto text-white flex'>
       {/* <Counter /> */}
       <img src='/Logo512.png' className=' w-64 h-64 m-auto' />

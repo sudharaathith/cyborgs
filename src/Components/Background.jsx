@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion'
 import ParticleSystem from './ParticleSystem';
+import NavBar from './NavBar';
 
 function Background(props) {
     let mouseX = useMotionValue(0);
@@ -36,6 +37,7 @@ function Background(props) {
         />
         <ParticleSystem />
         <div className={props.className}>
+        <NavBar />
          { props.children }
         </div>
       </div>

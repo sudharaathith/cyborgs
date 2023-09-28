@@ -4,8 +4,7 @@ class ParticleSystem extends Component {
   constructor(props) {
     super(props);
     this.canvasRef = React.createRef();
-    this.particles = [];
-    this.lines = [];
+    this.particles = this.initializeParticles();
   }
 
   componentDidMount() {
@@ -15,80 +14,74 @@ class ParticleSystem extends Component {
 
   initializeCanvas() {
     const canvas = this.canvasRef.current;
-    this.ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    this.ctx = ctx;
+  }
 
-    // Add some particles to the system
+  initializeParticles() {
+    const particles = [];
+    const canvasWidth = window.innerWidth;
+    const canvasHeight = window.innerHeight;
+
     for (let i = 0; i < 5; i++) {
-      this.particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx:(Math.random() - 0.5)*2,
-        vy:(Math.random() - 0.5)*2,
-        radius: window.innerWidth/7,
-        color: 'rgba(153, 76, 0, .1)',
-      });
-      console.log(window.innerWidth)
+      particles.push(this.createRandomParticle(canvasWidth, canvasHeight));
     }
+
+    return particles;
+  }
+
+  createRandomParticle(canvasWidth, canvasHeight) {
+    console.log(window.innerWidth)
+    return {
+      x: Math.random() * canvasWidth,
+      y: Math.random() * canvasHeight,
+      vx: (Math.random() - 0.5) * 2,
+      vy: (Math.random() - 0.5) * 2,
+      radius: (window.innerWidth<600?120:200),
+      color: 'rgba(153, 76, 0, 0.1)',
+    };
   }
 
   animate() {
-    this.ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    const { ctx } = this;
+    const canvasWidth = window.innerWidth;
+    const canvasHeight = window.innerHeight;
+
+    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 
     this.particles.forEach((particle) => {
       this.drawParticle(particle);
-      this.updateParticlePosition(particle);
+      this.updateParticlePosition(particle, canvasWidth, canvasHeight);
     });
-
-
-
 
     requestAnimationFrame(this.animate.bind(this));
   }
 
-  areParticlesNear(particle1, particle2, distanceThreshold) {
-    const dx = particle1.x - particle2.x;
-    const dy = particle1.y - particle2.y;
-    const distance = Math.sqrt(dx * dx + dy * dy);
-    return distance < distanceThreshold;
-  }
-
-  drawLine(particle){
-    this.particles.forEach((particle1) => {
-        if( this.areParticlesNear(particle, particle1,70)){
-            this.ctx.beginPath()
-            this.ctx.strokeStyle = '#fff';
-            this.ctx.moveTo(particle.x, particle.y);
-            this.ctx.lineTo(particle1.x, particle1.y);
-            this.ctx.stroke()
-        }
-    })
-  }
-
   drawParticle(particle) {
-    this.ctx.beginPath();
-    this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-    this.ctx.fillStyle = particle.color;
-    this.ctx.fill();
-    this.ctx.closePath();
-    // this.drawLine(particle);
+    const { ctx } = this;
+    ctx.beginPath();
+    ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+    ctx.fillStyle = particle.color;
+    ctx.fill();
+    ctx.closePath();
   }
 
-  updateParticlePosition(particle) {
+  updateParticlePosition(particle, canvasWidth, canvasHeight) {
     particle.x += particle.vx;
-    particle.y +=particle.vy;
+    particle.y += particle.vy;
 
-    if (particle.x < 0) particle.vx *= -1;
-    if (particle.x > window.innerWidth) particle.vx *= -1;
-    if (particle.y < 0) particle.vy *= -1;
-    if (particle.y > window.innerHeight)  particle.vy *= -1;
+    if (particle.x < 0 || particle.x > canvasWidth) {
+      particle.vx *= -1;
+    }
+    if (particle.y < 0 || particle.y > canvasHeight) {
+      particle.vy *= -1;
+    }
   }
-
-
 
   render() {
-    return <canvas className=' top-0 left-0 blur-3xl w-screen h-screen  fixed ' ref={this.canvasRef} />;
+    return <canvas className='top-0 overflow-x-hidden left-0 blur-3xl w-screen h-screen fixed' ref={this.canvasRef} />;
   }
 }
 

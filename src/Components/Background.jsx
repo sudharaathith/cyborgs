@@ -3,6 +3,7 @@ import { motion, useMotionTemplate } from "framer-motion";
 import ParticleSystem from "./ParticleSystem";
 import NavBar from "./NavBar";
 import useMouse from "../Util/useMouse";
+import Loader from "./Loader";
 
 function Background(props) {
   const { handleMouseMove, mouseX, mouseY } = useMouse();
@@ -28,8 +29,10 @@ function Background(props) {
       />
       {isHide ? <ParticleSystem /> : null}
       <div className="">
+        <Loader >
         <NavBar />
         {props.children}
+        </Loader>
       </div>
     </div>
   );

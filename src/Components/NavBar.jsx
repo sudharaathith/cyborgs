@@ -47,7 +47,7 @@ function NavItem(props) {
 function RegisterButton(props) {
   return (
     <motion.div
-      initial={{ rotateZ: -360, opacity: 0, scale: 0.2 }}
+      initial={{ rotateZ: -180, opacity: 0, scale: 0.2 }}
       whileInView={{
         rotateZ: 0,
         opacity: 100,

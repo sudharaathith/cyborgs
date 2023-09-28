@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function NavBar() {
     const navg = useNavigate();
   return (
-    <div className=" backdrop-blur-xl fixed top-0 w-screen bg-orange-500/5 text-orange-500  px-5 py-2 flex flex-row justify-between items-center drop-shadow-glow overflow-x-hidden">
+    <div className=" backdrop-blur-xl z-10 fixed top-0 w-screen bg-orange-500/5 text-orange-500  px-5 py-2 flex flex-row justify-between items-center drop-shadow-glow overflow-x-hidden">
       <div className=" flex flex-row mx-7">
         <img src="/Logo512.png" className=" w-20 h-20" />
         {/* <div className='my-auto mx-2 text-2xl font-bold font-["Poppin"]'>Cyborgs</div> */}

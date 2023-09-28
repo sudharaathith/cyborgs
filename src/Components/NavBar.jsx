@@ -15,7 +15,7 @@ function NavBar() {
         <NavItem navg={navg} to="/event" delay=".1">
           Event
         </NavItem>
-        <NavItem navg={navg} delay=".2">
+        <NavItem navg={navg} to="/about" delay=".2">
           About
         </NavItem>
         <NavItem navg={navg} delay=".3">

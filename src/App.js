@@ -1,12 +1,15 @@
 import "./App.css";
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Router, Routes, useLocation } from "react-router-dom";
 import Home from "./Page/Home";
 import Event from "./Page/Event";
 import Background from "./Components/Background";
+import { AnimatePresence } from "framer-motion";
+import About from "./Page/About";
 
 import AboutSection from './Page/AboutSection';
 
 function App() {
+  // const location = useLocation();
   return (
     <BrowserRouter>
     <Background>

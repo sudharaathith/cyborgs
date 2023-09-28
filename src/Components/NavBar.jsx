@@ -57,7 +57,7 @@ function RegisterButton(props) {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       animate={{ scale: 1 }}
-      className=" select-none cursor-pointer text-xl bg-orange-600/90 font-[zeniq] text-orange-50 px-2 py-1 rounded-md"
+      className=" select-none cursor-pointer text-xl bg-orange-600/90 font-[zeniq] text-orange-50 px-2 py-1 rounded-md animate-pulse hover:animate-none"
     >
       Register
     </motion.div>

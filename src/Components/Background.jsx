@@ -8,7 +8,7 @@ function Background(props) {
   const { handleMouseMove, mouseX, mouseY } = useMouse();
   const [isHide, setIsHide] = useState(false);
 
-  setTimeout(() => setIsHide(true), 6000);
+  setTimeout(() => setIsHide(true), 7000);
   return (
     <div
       className="group absolute bg-black w-screen min-h-screen overflow-x-hidden"

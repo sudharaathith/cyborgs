@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom"; 
 function NavBar() {
   const navg = useNavigate();
   return (
@@ -28,6 +27,7 @@ function NavBar() {
   );
 }
 
+
 function NavItem(props) {
   return (
     <motion.div
@@ -40,7 +40,7 @@ function NavItem(props) {
       }}
     >
       {props.children}
-    </motion.div>
+    </Link>
   );
 }
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import Card from '../Components/Card'
-import Caroussel from '../Components/Caroussel'
+import Card from './Card'
+import Caroussel from './Caroussel'
 import { v4 as uuidv4 } from "uuid";
 
 
@@ -15,19 +15,19 @@ function Event() {
     },
     {
       key: uuidv4(),
-      content: <Card eventname="EVENT THERILA"/>
+      content: <Card eventname="CODE MYSTIQUE"/>
     },
     {
       key: uuidv4(),
-      content: <Card eventname="EVENT THERILA"/>
+      content: <Card eventname="PAPER PORTICO"/>
     },
     {
       key: uuidv4(),
-      content: <Card eventname="EVENT THERILA"/>
+      content: <Card eventname="CINEASTE"/>
     },
     {
       key: uuidv4(),
-      content: <Card eventname="EVENT THERILA"/>
+      content: <Card eventname="CYBORG LEAGUE"/>
     }
   ];
 

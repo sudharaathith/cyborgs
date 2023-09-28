@@ -12,9 +12,9 @@ const Card = (props) => {
                 className="absolute -inset-1 bg-gradient-to-r from-orange-600 to-yellow-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
             </div>
             <div
-                className="relative px-7 py-6  bg-black ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6 h-60 w-60">
+                className="relative px-7 py-6  bg-black ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6 h-96 w-96">
             <div className="space-y-2">
-                    <p className="text-orange-600 font-[zeniq]">{props.eventname}</p>
+                    <p className="text-orange-600 font-[zeniq] ml-20 w-full">{props.eventname}</p>
                 </div>
             </div>
         </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import { motion,  useScroll, useSpring, useTransform } from 'framer-motion'
 
 import Counter from '../Components/Counter'
+import Event from '../Components/Event'
 
 
 function Home() {
@@ -22,6 +23,14 @@ function Home() {
 
       <Counter />
       </div>
+      <div>
+      <h1 className="text-orange-600 font-[zeniq] text-center font-bold text-4xl">EVENTS</h1>
+      <Event className="mb-20" />
+      <button className="text-orange-600 font-[zeniq] border-double border-4 border-orange-600 m-auto p-4 rounded-lg flex items-center mb-10 transition-transform hover:border-orange-300 hover:scale-105">
+  View Event Details
+</button>
+      </div>
+
     </div>
 
   )

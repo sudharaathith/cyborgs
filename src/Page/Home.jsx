@@ -38,7 +38,7 @@ function Home() {
               delay={delay}
             />
           </motion.div>
-          <div>Register</div>
+          {/* <div>Register</div> */}
         </div>
       </div>
       <div className="flex flex-col h-screen justify-items-center overflow-x-hidden">

@@ -2,6 +2,7 @@ import React from 'react'
 import Card from './Card'
 import Caroussel from './Caroussel'
 import { v4 as uuidv4 } from "uuid";
+import Image from './Image';
 
 
 
@@ -11,23 +12,23 @@ function Event() {
   const slides = [
     {
       key: uuidv4(),
-      content: <Card eventname="THE BUNKER DILEMMA"/>
+      content: <Card eventname="THE BUNKER DILEMMA" img={<Image/>}/>
     },
     {
       key: uuidv4(),
-      content: <Card eventname="CODE MYSTIQUE"/>
+      content: <Card eventname="CODE MYSTIQUE" img={<Image/>}/>
     },
     {
       key: uuidv4(),
-      content: <Card eventname="PAPER PORTICO"/>
+      content: <Card eventname="PAPER PORTICO" img={<Image/>}/>
     },
     {
       key: uuidv4(),
-      content: <Card eventname="CINEASTE"/>
+      content: <Card eventname="CINEASTE" img={<Image/>}/>
     },
     {
       key: uuidv4(),
-      content: <Card eventname="CYBORG LEAGUE"/>
+      content: <Card eventname="CYBORG LEAGUE" img={<Image/>}/>
     }
   ];
 

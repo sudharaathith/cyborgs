@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class ParticleSystem extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class ParticleSystem extends Component {
 
   initializeCanvas() {
     const canvas = this.canvasRef.current;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     this.ctx = ctx;
@@ -33,14 +33,13 @@ class ParticleSystem extends Component {
   }
 
   createRandomParticle(canvasWidth, canvasHeight) {
-    console.log(window.innerWidth)
     return {
       x: Math.random() * canvasWidth,
       y: Math.random() * canvasHeight,
       vx: (Math.random() - 0.5) * 2,
       vy: (Math.random() - 0.5) * 2,
-      radius: (window.innerWidth<600?120:200),
-      color: 'rgba(153, 76, 0, 0.1)',
+      radius: window.innerWidth < 600 ? 120 : 200,
+      color: "rgba(153, 76, 0, 0.1)",
     };
   }
 
@@ -81,7 +80,12 @@ class ParticleSystem extends Component {
   }
 
   render() {
-    return <canvas className='top-0 overflow-x-hidden left-0 blur-3xl w-screen h-screen fixed' ref={this.canvasRef} />;
+    return (
+      <canvas
+        className="top-0 overflow-x-hidden left-0 blur-3xl w-screen h-screen fixed"
+        ref={this.canvasRef}
+      />
+    );
   }
 }
 

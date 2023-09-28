@@ -46,19 +46,22 @@ const Counter = () => {
   };
 
   return (
-      <div className="w-full max-w-5xl mx-auto flex items-center rounded-xl m-auto bg-transparent">
-        <CountdownItem delay={.1} num={remaining.days} text="days" />
-        <CountdownItem delay={.2} num={remaining.hours} text="hours" />
-        <CountdownItem delay={.3} num={remaining.minutes} text="minutes" />
-        <CountdownItem delay={.4} num={remaining.seconds} text="seconds" />
-      </div>
+    <div className="w-full max-w-5xl mx-auto flex items-center rounded-xl m-auto bg-transparent">
+      <CountdownItem delay={0.1} num={remaining.days} text="days" />
+      <CountdownItem delay={0.2} num={remaining.hours} text="hours" />
+      <CountdownItem delay={0.3} num={remaining.minutes} text="minutes" />
+      <CountdownItem delay={0.4} num={remaining.seconds} text="seconds" />
+    </div>
   );
 };
 
 const CountdownItem = ({ num, text, delay }) => {
   return (
-    <motion.div className="font-mono w-1/4 h-24 md:h-36 flex flex-col gap-1 rounded-xl md:gap-2 items-center justify-center border-r-[1px] border-transparent last:border-none bg-[#ffd700]/20" 
-    initial={{rotateX:-90, y:-100}} whileInView={{rotateX:0, y:0, transition:{delay:.2+delay}}}>
+    <motion.div
+      className="font-mono w-1/4 h-24 md:h-36 flex flex-col gap-1 rounded-xl md:gap-2 items-center justify-center border-r-[1px] border-transparent last:border-none bg-[#ffd700]/20"
+      initial={{ rotateX: -90, y: -100 }}
+      whileInView={{ rotateX: 0, y: 0, transition: { delay: 0.2 + delay } }}
+    >
       <div className="w-full text-center relative overflow-hidden">
         <AnimatePresence mode="popLayout">
           <motion.span

@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Counter from "../Components/Counter";
 import TextChanger from "../Components/TextChanger";
 import Loader from "../Components/Loader";
+import logo from '../Image/Logo512.png'
 
 function Home() {
   const { scrollY } = useScroll();
@@ -25,7 +26,7 @@ function Home() {
       >
         <div className="m-auto flex flex-col gap-9">
 
-        <motion.img style={{ x, y }} src="/Logo512.png" className=" w-64 h-64 m-auto" />
+        <motion.img style={{ x, y }} src={logo} className=" w-64 h-64 m-auto" />
         <motion.div style={{y, rotate:r,opacity:o, scale:s}}>
 
         <TextChanger className="m-auto text-center pl-9 w-screen text-orange-900 font-semibold text-xl" textArray={textArray} duration={duration} delay={delay} />

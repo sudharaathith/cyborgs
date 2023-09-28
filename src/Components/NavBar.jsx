@@ -1,13 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import logo from '../Image/Logo512.png'
 
 function NavBar() {
   const navg = useNavigate();
   return (
     <div className=" backdrop-blur-xl z-10 fixed top-0 w-screen bg-orange-500/5 text-orange-500  px-5 py-2 flex flex-row justify-between items-center drop-shadow-glow overflow-x-hidden">
       <div className=" flex flex-row mx-7">
-        <motion.img initial={{x:-120}} whileInView={{x:0, transition:{delay:.7}}} src="/Logo512.png" className=" w-20 h-20" />
+        <motion.img initial={{x:-120}} whileInView={{x:0, transition:{delay:.7}}} src={logo} className=" w-20 h-20" />
       </div>
       <div className="flex justify-stretch gap-5 mx-3">
         <NavItem navg={navg} to="/">
@@ -16,7 +17,7 @@ function NavBar() {
         <NavItem navg={navg} to="/event" delay=".1">
           Event
         </NavItem>
-        <NavItem navg={navg} delay=".2">
+        <NavItem navg={navg} to="/about" delay=".2">
           About
         </NavItem>
         <NavItem navg={navg} delay=".3">

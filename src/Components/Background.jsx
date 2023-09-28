@@ -6,6 +6,7 @@ import useMouse from "../Util/useMouse";
 import Loader from "./Loader";
 
 function Background(props) {
+  
   const { handleMouseMove, mouseX, mouseY } = useMouse();
   const [isHide, setIsHide] = useState(false);
 

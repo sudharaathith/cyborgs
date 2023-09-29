@@ -4,6 +4,7 @@ import Counter from "../Components/Counter";
 import TextChanger from "../Components/TextChanger";
 import logo from "../Image/Logo512.png";
 import Event from '../Components/Event'
+import Footer from "../Components/Footer";
 
 
 function Home() {
@@ -53,7 +54,7 @@ function Home() {
   View Event Details
 </button>
       </div>
-
+      <Footer />
     </div>
   );
 }

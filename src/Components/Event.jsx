@@ -16,7 +16,7 @@ function Event() {
     },
     {
       key: uuidv4(),
-      content: <Card eventname="CODE MYSTIQUE" img={<Image/>}/>
+      content: <Card eventname="CODE MYSTIQUE" description="amaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" img={<Image/>}/>
     },
     {
       key: uuidv4(),

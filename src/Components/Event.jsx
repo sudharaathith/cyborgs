@@ -1,30 +1,31 @@
-import React from "react";
-import Card from "../Components/Card";
-import Caroussel from "../Components/Caroussel";
+import React from 'react'
+import Card from './Card'
+import Caroussel from './Caroussel'
 import { v4 as uuidv4 } from "uuid";
+import Image from './Image';
 
 function Event() {
   const slides = [
     {
       key: uuidv4(),
-      content: <Card eventname="THE BUNKER DILEMMA" />,
+      content: <Card eventname="THE BUNKER DILEMMA" img={<Image/>}/>
     },
     {
       key: uuidv4(),
-      content: <Card eventname="EVENT THERILA" />,
+      content: <Card eventname="CODE MYSTIQUE" img={<Image/>}/>
     },
     {
       key: uuidv4(),
-      content: <Card eventname="EVENT THERILA" />,
+      content: <Card eventname="PAPER PORTICO" img={<Image/>}/>
     },
     {
       key: uuidv4(),
-      content: <Card eventname="EVENT THERILA" />,
+      content: <Card eventname="CINEASTE" img={<Image/>}/>
     },
     {
       key: uuidv4(),
-      content: <Card eventname="EVENT THERILA" />,
-    },
+      content: <Card eventname="CYBORG LEAGUE" img={<Image/>}/>
+    }
   ];
 
   return (

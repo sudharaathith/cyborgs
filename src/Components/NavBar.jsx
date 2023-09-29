@@ -13,8 +13,8 @@ function NavBar() {
       </div>
       <div className="flex justify-stretch gap-5 mx-3">
         <NavItem navg={navg} to='/'>Home</NavItem>
-        <NavItem navg={navg}  delay=".1"><AnchorLink href='#event'>Event</AnchorLink></NavItem>
-        <NavItem navg={navg} delay=".2">About</NavItem>
+        <NavItem navg={navg} delay=".1"><AnchorLink href='#event'>Event</AnchorLink></NavItem>
+        <NavItem navg={navg} to="/about" delay=".2">About</NavItem>
         <NavItem navg={navg} delay=".3">Contact</NavItem>
       <RegisterButton />
       </div>

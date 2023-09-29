@@ -39,7 +39,7 @@ function Event() {
       <div>
         <Caroussel
           slides={slides}
-          height="1000px"
+          height="500px"
           width="100%"
           margin="0 auto"
           offset={2}

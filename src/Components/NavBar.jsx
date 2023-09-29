@@ -6,7 +6,7 @@ import logo from '../Image/Logo512.png'
 function NavBar() {
   const navg = useNavigate();
   return (
-    <div className=" backdrop-blur-xl z-10 fixed top-0 w-screen bg-orange-500/5 text-orange-500  px-5 py-2 flex flex-row justify-between items-center drop-shadow-glow overflow-x-hidden">
+    <div className=" backdrop-blur-xl z-10 fixed top-0 w-screen bg-black/5 text-orange-500  px-5 py-2 flex flex-row justify-between items-center drop-shadow-glow overflow-x-hidden">
       <div className=" flex flex-row mx-7">
         <motion.img initial={{x:-120}} whileInView={{x:0, transition:{delay:.7}}} src={logo} className=" w-20 h-20" />
       </div>

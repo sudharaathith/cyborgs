@@ -15,7 +15,7 @@ function Background(props) {
       className="group absolute bg-black w-screen min-h-screen overflow-x-hidden"
       onMouseMove={handleMouseMove}
     >
-      <motion.div
+      {/* <motion.div
         className="pointer-events-none top-0 left-0 w-screen h-full absolute inset-0 rounded-xl transition duration-300 opacity-100 overflow-x-hidden"
         style={{
           background: useMotionTemplate`
@@ -26,7 +26,7 @@ function Background(props) {
               )
             `,
         }}
-      />
+      /> */}
       {isHide ? <ParticleSystem /> : null}
       <div className="">
         <Loader >

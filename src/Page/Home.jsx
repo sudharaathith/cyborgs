@@ -7,10 +7,10 @@ import logo from "../Image/Logo512.png";
 
 function Home() {
   const { scrollY } = useScroll();
-  const x = useTransform(scrollY, [100, 400], [0, window.innerWidth / 2 + 80]);
+  const x = useTransform(scrollY, [100, 400], [0, 100]);
   const y = useTransform(scrollY, [100, 400], [0, 300]);
   const r = useTransform(scrollY, [100, 400], [0, 90]);
-  const o = useTransform(scrollY, [100, 400], [100, 0]);
+  const o = useTransform(scrollY, [100, 400], [1, 0]);
   const s = useTransform(scrollY, [100, 400], [1, 0]);
   const textArray = [
     "Scroll Slowly",
@@ -26,7 +26,7 @@ function Home() {
       <div className="m-auto text-white flex h-screen overflow-x-hidden">
         <div className="m-auto flex flex-col gap-9">
           <motion.img
-            style={{ x, y }}
+            style={{ opacity:100-x }}
             src={logo}
             className=" w-64 h-64 m-auto"
           />

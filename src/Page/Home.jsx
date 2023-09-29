@@ -8,10 +8,10 @@ import Event from '../Components/Event'
 
 function Home() {
   const { scrollY } = useScroll();
-  const x = useTransform(scrollY, [100, 400], [0, 100]);
-  const y = useTransform(scrollY, [100, 500], [0, 300]);
-  const r = useTransform(scrollY, [100, 500], [0, 90]);
-  const o = useTransform(scrollY, [100, 500], [1, 0]);
+  const x = useTransform(scrollY, [100, 600], [0, 200]);
+  const y = useTransform(scrollY, [100, 600], [0, 300]);
+  const r = useTransform(scrollY, [100, 600], [0, 90]);
+  const o = useTransform(scrollY, [100, 600], [1, 0]);
   const s = useTransform(scrollY, [100, 400], [1, 0]);
   const textArray = [
     "Scroll Slowly",

@@ -9,15 +9,15 @@ import Event from '../Components/Event'
 function Home() {
   const { scrollY } = useScroll();
   const x = useTransform(scrollY, [100, 400], [0, 100]);
-  const y = useTransform(scrollY, [100, 400], [0, 300]);
-  const r = useTransform(scrollY, [100, 400], [0, 90]);
-  const o = useTransform(scrollY, [100, 400], [1, 0]);
+  const y = useTransform(scrollY, [100, 500], [0, 300]);
+  const r = useTransform(scrollY, [100, 500], [0, 90]);
+  const o = useTransform(scrollY, [100, 500], [1, 0]);
   const s = useTransform(scrollY, [100, 400], [1, 0]);
   const textArray = [
     "Scroll Slowly",
     "By Department of Computer Science",
     "A Computer Science Symposium",
-    "summa",
+    "summa"
   ];
   const duration = 1000; // Animation duration in milliseconds
   const delay = 1000;
@@ -33,7 +33,7 @@ function Home() {
           />
           <motion.div style={{ y, rotate: r, opacity: o, scale: s }}>
             <TextChanger
-              className="m-auto text-center pl-9 w-screen text-orange-900 font-semibold text-xl"
+              className="m-auto text-center pl-9 w-screen text-orange-900 font-semibold text-2xl"
               textArray={textArray}
               duration={duration}
               delay={delay}

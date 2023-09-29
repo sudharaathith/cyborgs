@@ -61,6 +61,7 @@ const CountdownItem = ({ num, text, delay }) => {
       className="font-mono w-1/4 h-24 md:h-36 flex flex-col gap-1 rounded-xl md:gap-2 items-center justify-center border-r-[1px] border-transparent last:border-none bg-[#ffd700]/20"
       initial={{ rotateX: -90, y: -100 }}
       whileInView={{ rotateX: 0, y: 0, transition: { delay: 0.5 + delay } }}
+      viewport={{ once: true }}
     >
       <div className="w-full text-center relative overflow-hidden">
         <AnimatePresence mode="popLayout">

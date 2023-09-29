@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import image from '../Image/Cyborgs1.gif'
+import image from '../Image/Cyborgs.gif'
 
 function Loader({children}) {
     

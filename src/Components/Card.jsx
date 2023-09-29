@@ -1,28 +1,47 @@
-import React from 'react'
- 
-
+import React, { useState } from 'react';
 
 const Card = (props) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const flipCard = () => {
+    setIsFlipped(!isFlipped);
+  };
+
   return (
-    <div className="min-h-screen flex flex-col justify-center relative overflow-hidden">
-         <div>
-            {props.children}
-        </div>
-    <div className="max-w-7xl mx-auto">
-        <div className="relative group cursor-pointer">
-            <div
-                className="absolute -inset-1 bg-gradient-to-r from-orange-600 to-yellow-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
-            </div>
-            <div
-                className="relative px-7 py-6  bg-black ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6 h-96 w-96">
-            <div className="space-y-2">
-                    <div className="h-72 w-72 flex justify-center mx-10 my-10">{props.img}</div>
-                    <p className="text-orange-600 font-[zeniq] ml-20 w-full">{props.eventname}</p>
-                </div>
+    <div className={`min-h-screen flex flex-col justify-center relative overflow-hidden ${isFlipped ? 'flipped' : ''}`}>
+      <div>
+        {isFlipped ? (
+          // Back of the card
+          <div className="max-w-7xl mx-auto">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-orange-600 to-yellow-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
+              </div>
+              <div className="relative px-7 py-6 bg-black ring-1 ring-gray-900/5 rounded-lg leading-none flex flex-col space-y-4 h-110 w-96">
+                <p className="text-orange-600 font-[zeniq]">{props.eventname}</p>
+              <p>{props.description}</p>
+              <div className="flex justify-between">
+                <button className="text-orange-600">Register</button>
+                <button onClick={flipCard} className="text-orange-600">Back</button>
+              </div>
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          // Front of the card
+          <div className="max-w-7xl mx-auto">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-orange-600 to-yellow-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
+              </div>
+              <div className="relative px-7 py-6 bg-black ring-1 ring-gray-900/5 rounded-lg leading-none flex flex-col space-y-4 h-110 w-96">
+                <div className="h-80 w-80 flex justify-center">{props.img}</div>
+                <p className="text-orange-600 font-[zeniq] ml-20 w-full">{props.eventname}</p>
+                <button onClick={flipCard} className="text-orange-600 mt-4 mx-auto">View Details</button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
+    </div>
   );
 };
 

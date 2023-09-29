@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import logo from '../Image/Logo512.png'
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function NavBar() {
   const navg = useNavigate();
@@ -11,19 +12,11 @@ function NavBar() {
         <motion.img initial={{x:-120}} whileInView={{x:0, transition:{delay:.7}}} src={logo} className=" w-20 h-20" />
       </div>
       <div className="flex justify-stretch gap-5 mx-3">
-        <NavItem navg={navg} to="/">
-          Home
-        </NavItem>
-        <NavItem navg={navg} to="/event" delay=".1">
-          Event
-        </NavItem>
-        <NavItem navg={navg} to="/about" delay=".2">
-          About
-        </NavItem>
-        <NavItem navg={navg} delay=".3">
-          Contact
-        </NavItem>
-        <RegisterButton />
+        <NavItem navg={navg} to='/'>Home</NavItem>
+        <NavItem navg={navg}  delay=".1"><AnchorLink href='#event'>Event</AnchorLink></NavItem>
+        <NavItem navg={navg} delay=".2">About</NavItem>
+        <NavItem navg={navg} delay=".3">Contact</NavItem>
+      <RegisterButton />
       </div>
     </div>
   );

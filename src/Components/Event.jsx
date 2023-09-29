@@ -6,26 +6,12 @@ import Image from './Image';
 
 function Event() {
   const slides = [
-    {
-      key: uuidv4(),
-      content: <Card eventname="THE BUNKER DILEMMA" img={<Image/>}/>
-    },
-    {
-      key: uuidv4(),
-      content: <Card eventname="CODE MYSTIQUE" img={<Image/>}/>
-    },
-    {
-      key: uuidv4(),
-      content: <Card eventname="PAPER PORTICO" img={<Image/>}/>
-    },
-    {
-      key: uuidv4(),
-      content: <Card eventname="CINEASTE" img={<Image/>}/>
-    },
-    {
-      key: uuidv4(),
-      content: <Card eventname="CYBORG LEAGUE" img={<Image/>}/>
-    }
+    
+    <Card eventname="THE BUNKER DILEMMA" img={<Image/>}/>,
+    <Card eventname="CODE MYSTIQUE" img={<Image/>}/>,
+    <Card eventname="PAPER PORTICO" img={<Image/>}/>,
+    <Card eventname="CINEASTE" img={<Image/>}/>,
+    <Card eventname="CYBORG LEAGUE" img={<Image/>}/>
   ];
 
   return (

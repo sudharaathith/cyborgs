@@ -1,4 +1,4 @@
-import Carousel from "react-spring-3d-carousel";
+import { Carousel } from 'react-responsive-carousel';
 import { config } from "react-spring";
 import React from "react";
 import { useState, useEffect } from "react";
@@ -22,13 +22,9 @@ const Caroussel = (props) => {
     <div
       style={{ width: props.width, height: props.height, margin: props.margin }}
     >
-      <Carousel
-        slides={slides}
-        goToSlide={goToSlide}
-        offsetRadius={offsetRadius}
-        showNavigation={showArrows}
-        animationConfig={config.gentle}
-      />
+      <Carousel>
+        {props.slides}
+      </Carousel>
     </div>
   );
 };

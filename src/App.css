@@ -19,6 +19,10 @@
         font-family: TrigramLight;
         src: url('/fonts/TrigramLight-w1XDz.ttf');
       }
+      @font-face {
+        font-family: UnderStation;
+        src: url('/fonts/Under\ Station.ttf');
+      }
 
 }
 

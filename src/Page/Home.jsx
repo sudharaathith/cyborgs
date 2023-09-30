@@ -2,7 +2,7 @@ import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Counter from "../Components/Counter";
 import TextChanger from "../Components/TextChanger";
-import logo from "../Image/Text.gif";
+import logo from "../Image/Text1.gif";
 import Event from '../Components/Event'
 import Footer from "../Components/Footer";
 
@@ -24,17 +24,16 @@ function Home() {
 
   return (
     <div className="flex flex-col justify-items-center min-h-screen overflow-x-hidden">
-      <div className="m-auto text-white flex h-96 mt-20 mb-20 overflow-x-hidden">
-        <div className="m-auto flex flex-col gap-9">
+      <div className="m-auto text-white flex h-screen overflow-x-hidden">
+        <div className="m-auto flex flex-col ">
           <img
-            style={{ opacity:100-x }}
             src={logo}
-            className=" w-64 h-64 m-auto"
+            className=" h-[30rem] mt-0 mx-auto"
           />
           
           <div>
             <TextChanger
-              className="m-auto text-center pl-9 font-[TrigarmLight] w-screen text-orange-600 font-semibold text-4xl"
+              className="mx-auto text-center  font-[TrigarmLight] w-screen text-slate-200 font-semibold text-xl"
               textArray={textArray}
               duration={duration}
               delay={delay}

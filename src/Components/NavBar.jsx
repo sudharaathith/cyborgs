@@ -7,7 +7,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 function NavBar() {
   const navg = useNavigate();
   return (
-    <div className=" backdrop-blur-xl z-10 fixed top-0 w-screen bg-orange-500/5 text-orange-500  px-5 py-2 flex flex-row justify-between items-center  overflow-x-hidden">
+    <div className=" backdrop-blur-xl z-10 fixed top-0 w-screen bg-orange-500/5 text-violet-300  px-5 py-2 flex flex-row justify-between items-center  overflow-x-hidden">
       <div className=" flex flex-row mx-7">
         <motion.img initial={{x:-120}} whileInView={{x:0, transition:{delay:.7}}} src={logo} className=" w-20 h-20" />
       </div>
@@ -26,7 +26,7 @@ function NavBar() {
 function NavItem(props) {
   return (
     <motion.div
-      className=" text-xl cursor-pointer select-none font-[zeniq] my-auto"
+      className=" text-xl cursor-pointer select-none font-[UnderStation] my-auto"
       initial={{ y: -70, rotateZ: -130 }}
       transition={{ delay: 0.3 + props.delay ? props.delay : 0 }}
       whileInView={{ y: 0, rotateZ: 0 }}

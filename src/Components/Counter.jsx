@@ -71,7 +71,7 @@ const CountdownItem = ({ num, text, delay }) => {
             animate={{ y: "0%" }}
             exit={{ y: "-100%" }}
             transition={{ ease: "backIn", duration: 0.75 }}
-            className="block text-2xl md:text-4xl font-[TrigramLight] lg:text-6xl xl:text-7xl text-orange-600 font-medium"
+            className="block text-2xl md:text-4xl font-[UnderStation] lg:text-6xl xl:text-7xl text-violet-600 font-medium"
           >
             {num}
           </motion.span>

@@ -2,7 +2,7 @@ import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Counter from "../Components/Counter";
 import TextChanger from "../Components/TextChanger";
-import logo from "../Image/Logo512.png";
+import logo from "../Image/Text.gif";
 import Event from '../Components/Event'
 import Footer from "../Components/Footer";
 

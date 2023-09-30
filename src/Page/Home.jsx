@@ -9,11 +9,10 @@ import Footer from "../Components/Footer";
 
 function Home() {
   const { scrollY } = useScroll();
-  const x = useTransform(scrollY, [100, 600], [0, 200]);
-  const y = useTransform(scrollY, [100, 600], [0, 300]);
-  const r = useTransform(scrollY, [100, 600], [0, 90]);
-  const o = useTransform(scrollY, [100, 600], [1, 0]);
-  const s = useTransform(scrollY, [100, 400], [1, 0]);
+  const x = useTransform(scrollY ,[0, window.innerHeight], [window.innerWidth, window.innerWidth/2]);
+  const x2 = useTransform(scrollY ,[0, window.innerHeight], [-window.innerWidth, -window.innerWidth/2]);
+  const opacity = useTransform(scrollY ,[ window.innerHeight*1, window.innerHeight*1.1], [ 1, 0]);
+  const opacity1 = useTransform(scrollY ,[ window.innerHeight*1.1, window.innerHeight*1.2], [ 0, 1]);
   const textArray = [
     "Scroll Slowly",
     "By Department of Computer Science",
@@ -23,28 +22,33 @@ function Home() {
   const delay = 1000;
 
   return (
-    <div className="flex flex-col justify-items-center min-h-screen overflow-x-hidden">
-      <div className="m-auto text-white flex h-screen overflow-x-hidden">
-        <div className="m-auto flex flex-col ">
+    <div className="flex flex-col justify-items-center min-h-screen overflow-x-hidden ">
+      <div style={{height:`${Math.floor(window.innerHeight*1.2)}px`}} />
+      <motion.div className="m-auto text-white flex h-screen  overflow-x-hidden fixed" style={{opacity}}>
+        <div className="mx-auto sm:my-auto flex flex-col ">
+          <motion.div className=" fixed top-0 left-0 w-screen h-screen bg-black z-20 border-l" style={{x}} />
+          <motion.div className=" fixed top-0 left-0 w-screen h-screen bg-black z-20 border-r" style={{x:x2}} />
+          <div className=" max-sm:mt-52">
           <img
             src={logo}
-            className=" h-[30rem] mt-0 mx-auto"
+            className=" sm:h-[30rem] sm:mt-0 mx-auto"
           />
           
           <div>
             <TextChanger
-              className="mx-auto text-center  font-[TrigarmLight] w-screen text-slate-200 font-semibold text-xl"
+              className="mx-auto text-center  font-[] w-screen text-slate-200 font-semibold text-xl"
               textArray={textArray}
               duration={duration}
               delay={delay}
             />
           </div>
+          </div>
           {/* <div>Register</div> */}
         </div>
-      </div>
-      <div className="flex flex-col h-72 justify-items-center overflow-x-hidden">
+      </motion.div>
+      <motion.div className="flex flex-col h-screen justify-items-center overflow-x-hidden " style={{opacity:opacity1}}>
         <Counter />
-      </div>
+      </motion.div>
       <div id="event">
       
       <h1 className="text-orange-600 font-[zeniq] text-center font-bold text-4xl">EVENTS</h1>

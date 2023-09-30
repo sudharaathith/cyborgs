@@ -82,7 +82,7 @@ class ParticleSystem extends Component {
   render() {
     return (
       <canvas
-        className="top-0 overflow-x-hidden left-0 blur-3xl w-screen h-screen fixed"
+        className="top-0 overflow-x-hidden z-50 left-0 blur-3xl w-screen h-screen fixed"
         ref={this.canvasRef}
       />
     );

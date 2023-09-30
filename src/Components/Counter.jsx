@@ -46,7 +46,7 @@ const Counter = () => {
   };
 
   return (
-    <div className="w-full max-w-5xl mx-auto flex items-center rounded-xl m-auto bg-transparent">
+    <div className="w-full max-w-5xl mx-auto flex flex-col sm:flex-row items-center rounded-xl m-auto bg-transparent">
       <CountdownItem delay={0.1} num={remaining.days} text="DAYS" />
       <CountdownItem delay={0.2} num={remaining.hours} text="HOURS" />
       <CountdownItem delay={0.3} num={remaining.minutes} text="MINUTES" />

@@ -23,6 +23,10 @@
         font-family: UnderStation;
         src: url('/fonts/Under\ Station.ttf');
       }
+      @font-face {
+        font-family: PaintBrush;
+        src: url('/fonts/PaintBrush.ttf');
+      }
 
 }
 

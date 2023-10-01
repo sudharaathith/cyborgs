@@ -3,8 +3,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Counter from "../Components/Counter";
 import TextChanger from "../Components/TextChanger";
 import logo from "../Image/Logo512.png";
-import Event from '../Components/Event'
 import Footer from "../Components/Footer";
+import Card from "../Components/event/Card";
 
 
 function Home() {
@@ -15,10 +15,8 @@ function Home() {
   const o = useTransform(scrollY, [100, 600], [1, 0]);
   const s = useTransform(scrollY, [100, 400], [1, 0]);
   const textArray = [
-    "Scroll Slowly",
     "By Department of Computer Science",
-    "A Computer Science Symposium",
-    "summa"
+    "A Computer Science Symposium"
   ];
   const duration = 1000; // Animation duration in milliseconds
   const delay = 1000;
@@ -45,14 +43,8 @@ function Home() {
       </div>
       <div className="flex flex-col h-screen justify-items-center overflow-x-hidden">
         <Counter />
-      </div>
-      <div id="event">
-      
-      <h1 className="text-orange-600 font-[zeniq] text-center font-bold text-4xl">EVENTS</h1>
-      <Event  className="mb-20" />
-      <button className="text-orange-600 font-[zeniq] border-double border-4 border-orange-600 m-auto p-4 rounded-lg flex items-center mb-10 transition-transform hover:border-orange-300 hover:scale-105">
-  View Event Details
-</button>
+      <Card/>
+
       </div>
       <Footer />
     </div>

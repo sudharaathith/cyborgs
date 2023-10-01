@@ -5,6 +5,7 @@ import TextChanger from "../Components/TextChanger";
 import logo from "../Image/Logo512.png";
 import Footer from "../Components/Footer";
 import Card from "../Components/Card";
+import Location from "../Components/Location";
 
 
 function Home() {
@@ -47,7 +48,9 @@ function Home() {
      <div >
      <Card/>  
      </div>
-     
+     <div>
+      <Location/>
+     </div>
       <Footer />
     </div>
   );

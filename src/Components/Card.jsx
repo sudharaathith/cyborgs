@@ -77,7 +77,7 @@ const Card = () => {
       </style>
       <div className="max-w-7xl mx-auto mb-20">
         <h2 className="text-xl font-semibold text-slate-200 mb-4">TECHNICAL EVENTS</h2>
-        <div className="grid grid-cols-3 gap-14">
+        <div className="grid grid-cols-1  sm:grid-cols-3 gap-14">
           {technicalEvents.map((event) => (
             <div key={event.id} className="relative group">
               <div
@@ -106,7 +106,7 @@ const Card = () => {
         </div>
         
         <h2 className="text-xl font-semibold text-slate-200 mb-4 mt-8">NON-TECHNICAL EVENTS</h2>
-        <div className="grid grid-cols-3 gap-14">
+        <div className="grid grid-cols-1  sm:grid-cols-3 gap-14">
           {nonTechnicalEvents.map((event) => (
             <div key={event.id} className="relative group">
               <div

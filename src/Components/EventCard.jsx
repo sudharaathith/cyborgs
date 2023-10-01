@@ -1,25 +1,42 @@
 import React from 'react';
 
 const EventCard = ({ onClose, event }) => {
+  const posterUrl = event.posterUrl || ''; 
+
   return (
     <div className="fixed inset-0 flex items-center justify-center z-70">
-      <div className="min-h-screen flex flex-col justify-center relative overflow-hidden">
-        <div className="max-w-7xl mx-auto mb-20">
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-slate-200 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
-            </div>
-            <div className="relative px-7 py-6 bg-black ring-1 ring-gray-900/5 rounded-lg leading-none flex flex-col space-y-4 h-110 w-96">
-              <div className="h-96 w-96 justify">
-                <p className="text-slate-200 font-[zeniq] w-full">{event.title}</p>
-                <p className="text-slate-200 w-full">{event.description}</p>
-                <p className="text-slate-200 w-full">{event.round1}</p>
-                <p className="text-slate-200 w-full">{event.round2}</p>
-                <button className="text-slate-200 mt-4" onClick={onClose}>
-                  Close
-                </button>
-                <button className="text-slate-200 mt-4 mx-5">Register</button>
-              </div>
-            </div>
+      <div className="h-3/4 w-3/4 max-w-4xl mx-auto bg-black rounded-lg shadow-lg p-6 flex relative border border-gradient-to-r from-blue-600 to-slate-200">
+
+        <div className="w-1/3">
+          <img src={posterUrl} alt="Event Poster" className="w-full h-full object-cover rounded-lg" />
+        </div>
+
+        <div className="w-2/3 px-6">
+          <h2 className="text-3xl font-bold text-slate-200 mb-4">{event.title}</h2>
+          <p className="text-slate-200 text-lg mb-4">{event.description}</p>
+          <h3 className="text-xl font-semibold text-slate-200 mb-2">Event Details:</h3>
+          <p className="text-slate-200 mb-2">{event.round1}</p>
+          <p className="text-slate-200 mb-4">{event.round2}</p>
+
+          <h3 className="text-xl font-semibold text-slate-200 mb-2">Coordinators:</h3>
+          <p className="text-slate-200 mb-2">Coordinator 1: {event.coordinator1}</p>
+          <p className="text-slate-200 mb-2">Coordinator 2: {event.coordinator2}</p>
+
+          <h3 className="text-xl font-semibold text-slate-200 mb-2">Contact:</h3>
+          <p className="text-slate-200 mb-4">{event.contact}</p>
+
+          <div className="flex">
+            <button
+              className="text-slate-200 text-lg mr-4   bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700"
+              onClick={onClose}
+            >
+              Close
+            </button>
+            <button
+              className="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700"
+            >
+              Register
+            </button>
           </div>
         </div>
       </div>

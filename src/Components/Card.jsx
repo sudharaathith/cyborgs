@@ -9,6 +9,7 @@ const events = [
     round1: 'Round 1: Written test on algorithms and data structures.',
     round2: 'Round 2: Live coding challenge on a real-world problem.',
     type: 'Technical',
+    posterUrl:'src/Image/Logo512.png'
   },
   {
     id: 2,

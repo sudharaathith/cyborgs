@@ -43,9 +43,11 @@ function Home() {
       </div>
       <div className="flex flex-col h-screen justify-items-center overflow-x-hidden">
         <Counter />
-      <Card/>
-
-      </div>
+     </div>
+     <div >
+     <Card/>  
+     </div>
+     
       <Footer />
     </div>
   );

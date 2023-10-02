@@ -63,6 +63,7 @@ const Card = () => {
   const nonTechnicalEvents = events.filter((event) => event.type === 'Non-Technical');
 
   return (
+
     <div className="min-h-screen flex flex-col justify-center relative overflow-hidden">
       <style>
         {`
@@ -137,6 +138,7 @@ const Card = () => {
             </div>
           ))}
         </div>
+
       </div>
 
       {isEventCardVisible && selectedEvent && (

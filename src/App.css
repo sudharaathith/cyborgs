@@ -7,6 +7,27 @@
         font-family: zeniq;
         src: url('/fonts/Zeniq.ttf');
       }
+      @font-face {
+        font-family: Stylish-Regular;
+        src: url('/fonts/Stylish-Regular.ttf');
+      }
+      @font-face {
+        font-family: Trigram;
+        src: url('/fonts/Trigram-vmLDM.ttf');
+      }
+      @font-face {
+        font-family: TrigramLight;
+        src: url('/fonts/TrigramLight-w1XDz.ttf');
+      }
+      @font-face {
+        font-family: UnderStation;
+        src: url('/fonts/Under\ Station.ttf');
+      }
+      @font-face {
+        font-family: PaintBrush;
+        src: url('/fonts/PaintBrush.ttf');
+      }
+
 }
 
 #root{

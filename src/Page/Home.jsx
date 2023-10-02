@@ -2,19 +2,20 @@ import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Counter from "../Components/Counter";
 import TextChanger from "../Components/TextChanger";
-import logo from "../Image/Logo512.png";
+
+import logo from "../Image/Text1.gif";
+import Event from '../Components/Event'
 import Footer from "../Components/Footer";
-import Card from "../Components/Card";
-import Location from "../Components/Location";
+import About from "../Components/About";
+
 
 
 function Home() {
   const { scrollY } = useScroll();
-  const x = useTransform(scrollY, [100, 600], [0, 200]);
-  const y = useTransform(scrollY, [100, 600], [0, 300]);
-  const r = useTransform(scrollY, [100, 600], [0, 90]);
-  const o = useTransform(scrollY, [100, 600], [1, 0]);
-  const s = useTransform(scrollY, [100, 400], [1, 0]);
+  const x = useTransform(scrollY ,[0, window.innerHeight], [window.innerWidth, window.innerWidth/2]);
+  const x2 = useTransform(scrollY ,[0, window.innerHeight], [-window.innerWidth, -window.innerWidth/2]);
+  const opacity = useTransform(scrollY ,[ window.innerHeight*1, window.innerHeight*1.1], [ 1, 0]);
+  const opacity1 = useTransform(scrollY ,[ window.innerHeight*1.1, window.innerHeight*1.2], [ 0, 1]);
   const textArray = [
     "By Department of Computer Science",
     "A Computer Science Symposium"
@@ -23,27 +24,33 @@ function Home() {
   const delay = 1000;
 
   return (
-    <div className="flex flex-col justify-items-center min-h-screen overflow-x-hidden">
-      <div className="m-auto text-white flex h-screen overflow-x-hidden">
-        <div className="m-auto flex flex-col gap-9">
-          <motion.img
-            style={{ opacity:100-x }}
+    <div className="flex flex-col justify-items-center min-h-screen overflow-x-hidden ">
+      <div style={{height:`${Math.floor(window.innerHeight*1.4)}px`}} />
+      <motion.div className="m-auto text-white flex h-screen  overflow-x-hidden fixed" style={{opacity}}>
+        <div className="mx-auto sm:my-auto max-sm:gap-6 flex flex-col ">
+          <motion.div className=" fixed top-0 left-0 w-screen h-screen bg-black z-30 border-l" style={{x}} />
+          <motion.div className=" fixed top-0 left-0 w-screen h-screen bg-black z-30 border-r" style={{x:x2}} />
+          <div className=" max-sm:mt-52 flex flex-col">
+          <img
             src={logo}
-            className=" w-64 h-64 m-auto"
+            className=" sm:h-[30rem] -z-40 sm:mt-0 mx-auto"
           />
-          <motion.div style={{ y, rotate: r, opacity: o, scale: s }}>
+          
+          <div>
             <TextChanger
-              className="m-auto text-center pl-9 w-screen text-orange-900 font-semibold text-2xl"
+              className="mx-auto text-center -z-10 font-[] w-screen text-slate-200 font-semibold text-xl"
               textArray={textArray}
               duration={duration}
               delay={delay}
             />
-          </motion.div>
+          </div>
+          </div>
           {/* <div>Register</div> */}
         </div>
-      </div>
-      <div className="flex flex-col h-screen justify-items-center overflow-x-hidden">
+      </motion.div>
+      <motion.div className="flex flex-col h-screen justify-items-center overflow-x-hidden " style={{opacity:opacity1}}>
         <Counter />
+
      </div>
      <div >
      <Card/>  
@@ -51,6 +58,14 @@ function Home() {
      <div>
       <Location/>
      </div>
+
+      </motion.div>
+      <div className=" p-10 flex z-50">
+      <About />
+      </div>
+
+      
+
       <Footer />
     </div>
   );

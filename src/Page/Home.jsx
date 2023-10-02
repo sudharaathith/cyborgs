@@ -2,10 +2,12 @@ import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Counter from "../Components/Counter";
 import TextChanger from "../Components/TextChanger";
+
 import logo from "../Image/Text1.gif";
 import Event from '../Components/Event'
 import Footer from "../Components/Footer";
 import About from "../Components/About";
+
 
 
 function Home() {
@@ -15,7 +17,6 @@ function Home() {
   const opacity = useTransform(scrollY ,[ window.innerHeight*1, window.innerHeight*1.1], [ 1, 0]);
   const opacity1 = useTransform(scrollY ,[ window.innerHeight*1.1, window.innerHeight*1.2], [ 0, 1]);
   const textArray = [
-    "Scroll Slowly",
     "By Department of Computer Science",
     "A Computer Science Symposium"
   ];
@@ -49,19 +50,22 @@ function Home() {
       </motion.div>
       <motion.div className="flex flex-col h-screen justify-items-center overflow-x-hidden " style={{opacity:opacity1}}>
         <Counter />
+
+     </div>
+     <div >
+     <Card/>  
+     </div>
+     <div>
+      <Location/>
+     </div>
+
       </motion.div>
       <div className=" p-10 flex z-50">
       <About />
       </div>
-      <div id="event">
+
       
-      <h1 className="text-orange-600 font-[zeniq] text-center font-bold text-4xl">EVENTS</h1>
-      <Event  className="mb-20" />
-      {/* <button className="text-orange-600 font-[zeniq] border-double border-4 border-orange-600 m-auto p-4 rounded-lg flex items-center mb-10 transition-transform hover:border-orange-300 hover:scale-105">
-  View Event Details
-</button> */}
-      </div>
-      
+
       <Footer />
     </div>
   );

@@ -40,5 +40,19 @@ html{
   overflow-x: hidden;
 }
 
+.text-glow-red{
+  color: #f37272; /* Set your desired text color here */
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Adjust the shadow color and size as needed */
+  animation: glow 0.5s ease-in-out infinite alternate; /* Adjust animation duration and timing as needed */
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(248, 113, 113, 0.5); /* Adjust the initial shadow properties */
+  }
+  to {
+    text-shadow: 0 0 20px rgba(248, 113, 113, 1); /* Adjust the final shadow properties */
+  }
+}
 
 

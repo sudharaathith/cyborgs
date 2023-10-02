@@ -46,11 +46,11 @@ const Counter = () => {
   };
 
   return (
-    <div className="w-full max-w-5xl mx-auto flex items-center rounded-xl m-auto bg-transparent">
-      <CountdownItem delay={0.1} num={remaining.days} text="days" />
-      <CountdownItem delay={0.2} num={remaining.hours} text="hours" />
-      <CountdownItem delay={0.3} num={remaining.minutes} text="minutes" />
-      <CountdownItem delay={0.4} num={remaining.seconds} text="seconds" />
+    <div className="w-full max-w-5xl mx-auto flex flex-col sm:flex-row items-center rounded-xl m-auto bg-transparent">
+      <CountdownItem delay={0.1} num={remaining.days} text="DAYS" />
+      <CountdownItem delay={0.2} num={remaining.hours} text="HOURS" />
+      <CountdownItem delay={0.3} num={remaining.minutes} text="MINUTES" />
+      <CountdownItem delay={0.4} num={remaining.seconds} text="SECONDS" />
     </div>
   );
 };
@@ -58,7 +58,7 @@ const Counter = () => {
 const CountdownItem = ({ num, text, delay }) => {
   return (
     <motion.div
-      className="font-mono w-1/4 h-24 md:h-36 flex flex-col gap-1 rounded-xl md:gap-2 items-center justify-center border-r-[1px] border-transparent last:border-none bg-[#ffd700]/20"
+      className="font-mono w-1/4 h-24 md:h-36 flex flex-col gap-1 rounded-xl md:gap-2 items-center justify-center border-r-[1px] border-transparent last:border-none bg-black"
       initial={{ rotateX: -90, y: -100 }}
       whileInView={{ rotateX: 0, y: 0, transition: { delay: 0.5 + delay } }}
       viewport={{ once: true }}
@@ -71,13 +71,13 @@ const CountdownItem = ({ num, text, delay }) => {
             animate={{ y: "0%" }}
             exit={{ y: "-100%" }}
             transition={{ ease: "backIn", duration: 0.75 }}
-            className="block text-2xl md:text-4xl lg:text-6xl xl:text-7xl text-black font-medium"
+            className="block text-2xl md:text-4xl font-[UnderStation] lg:text-6xl xl:text-7xl text-violet-600 font-medium"
           >
             {num}
           </motion.span>
         </AnimatePresence>
       </div>
-      <span className="text-xs md:text-sm lg:text-base font-light text-slate-500">
+      <span className="text-xs md:text-sm lg:text-base font-light text-white">
         {text}
       </span>
     </motion.div>

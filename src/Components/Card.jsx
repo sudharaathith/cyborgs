@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import EventCard from "./EventCard";
 import { delay, motion, stagger } from "framer-motion";
 import TextChanger from "./TextChanger";
+import poster from '../Image/bunker.png'
 
 const events = [
   {
@@ -11,7 +12,7 @@ const events = [
     round1: "Round 1: Written test on algorithms and data structures.",
     round2: "Round 2: Live coding challenge on a real-world problem.",
     type: "Technical",
-    posterUrl: "src/Image/Logo512.png",
+    posterUrl: {poster},
   },
   {
     id: 2,
@@ -86,7 +87,7 @@ const Card = () => {
           whileInView={{ opacity: 1, x: 0 }}
           className="font-bold text-slate-200 font-[UnderStation]  text-3xl text-center mb-16"
         >
-          <TextChanger textArray={['TECHNICAL EVENTS']} duration={1000} />
+          <TextChanger textArray={['TECHNICAL EVENTS','TECHNICAL EVENT','Technical Events']} duration={1000} />
         </motion.h1>
         <div className="mx-auto grid grid-cols mt-40 sm:grid-cols-2 md:mx-52 gap-16 justify-center">
           {technicalEvents.map((event, id) => (
@@ -107,7 +108,9 @@ const Card = () => {
               viewport={{ once: true }}
               key={event.id}
               className="relative group"
+              onClick={() => openEventCard(event)}
             >
+              
               <div
                 className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500 transform scale-105"
                 style={{
@@ -117,17 +120,18 @@ const Card = () => {
                 }}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.background =
-                    "linear-gradient(90deg, #3182CE, #93C5FD, #3182CE)")
+                    "linear-gradient(0deg, #3182CE, #93C5FD, #3182CE)")
                 }
                 onMouseLeave={(e) =>
                   (e.currentTarget.style.background =
-                    "linear-gradient(90deg, #3182CE, #93C5FD)")
+                    "linear-gradient(0deg, #3182CE, #93C5FD)")
                 }
               />
               <div className="relative px-4 py-6 bg-black bg-opacity-70 ring-1 ring-gray-900/5 rounded-lg leading-none flex flex-col h-96 ">
                 {/* <div className="h-40 w-40 mx-auto mb-2">
                   <img src={event.posterUrl} alt={event.title} className="w-full h-full object-cover rounded-lg" />
                 </div> */}
+                <img src={poster} className=" absolute top-0 left-0 w-full h-full" />
                 <p className="font-[UnderStation] text-glow-red text-2xl text-center mb-4">
                   {event.title}
                 </p>
@@ -150,7 +154,7 @@ const Card = () => {
           whileInView={{ opacity: 1, x: 0 }}
           className="font-bold text-slate-200 font-[UnderStation] text-3xl text-center mb-16 mt-40"
         >
-          <TextChanger textArray={['NON-TECHNICAL EVENTS']} duration={1000} delay={1500} />
+          <TextChanger textArray={['NON-TECHNICAL EVENTS', 'NON TECHNICAL EVENTS', 'NON-TECHNICAL EVENT', 'NON TECHNICAL EVENT']} duration={1000}  />
         </motion.h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-40 lg:grid-cols-3 gap-16 justify-center">
           {nonTechnicalEvents.map((event, id) => (

@@ -29,7 +29,7 @@ const TextChanger = ({ textArray, duration, className, delay=5000 }) => {
       r = t;
       console.log(r)
       transition(textArray[r]);
-    }, delay);
+    }, 5000);
     return () => {
       clearInterval(t);
     };

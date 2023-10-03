@@ -4,8 +4,8 @@ const EventCard = ({ onClose, event }) => {
   const posterUrl = event.posterUrl || ''; 
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-70">
-      <div className="h-3/4 w-3/4 max-w-4xl mx-auto bg-black rounded-lg shadow-lg p-6 flex relative border border-gradient-to-r from-blue-600 to-slate-200">
+    <div className="fixed inset-0 flex items-center justify-center z-[70]">
+      <div className="h-3/4 w-3/4  z-[80] max-w-4xl mx-auto bg-black rounded-lg shadow-lg p-6 flex relative border border-gradient-to-r from-blue-600 to-slate-200">
 
         <div className="w-1/3">
           <img src={posterUrl} alt="Event Poster" className="w-full h-full object-cover rounded-lg" />

@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Counter from "../Components/Counter";
 import TextChanger from "../Components/TextChanger";
 
-import logo from "../Image/Text1.gif";
+import logo from "../Image/Text2.gif";
 import Footer from "../Components/Footer";
 import About from "../Components/About";
 import Card from "../Components/Card";
@@ -51,10 +51,10 @@ function Home() {
       <div className=" p-10 flex z-50">
         <About />
       </div>
-      <div>
+      <div className='z-[60]'>
         <Card />
       </div>
-      <div>
+      <div className='z-50'>
         <Location />
       </div>
       

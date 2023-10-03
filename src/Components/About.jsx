@@ -13,9 +13,9 @@ function About(props) {
   const x1 = useTransform(scrollY ,[ window.innerHeight*2.3, window.innerHeight*2.8], [-100,0]);
   const o3 = useTransform(scrollY ,[ window.innerHeight*2.3, window.innerHeight*2.8], [0,1]);
   const y2 = useTransform(scrollY ,[ window.innerHeight*2.4, window.innerHeight*3.3], [100, 0]);
-  const x2 = useTransform(scrollY ,[ window.innerHeight*3.5, window.innerHeight*4], [100, 0]);
-  const o4 = useTransform(scrollY ,[ window.innerHeight*3.5, window.innerHeight*4], [0,1]);
-  const y3 = useTransform(scrollY ,[ window.innerHeight*3.6, window.innerHeight*4.2], [100, 0]);
+  const x2 = useTransform(scrollY ,[ window.innerHeight*3, window.innerHeight*3.6], [100, 0]);
+  const o4 = useTransform(scrollY ,[ window.innerHeight*3, window.innerHeight*3.6], [0,1]);
+  const y3 = useTransform(scrollY ,[ window.innerHeight*3.1, window.innerHeight*3.7], [100, 0]);
   return (
     <div className='h-fit rounded-xl backdrop-blur-xl sm:p-3 w-full shadow-blue-600'>
         <motion.h1 style={{y, opacity:o}} className='font-[UnderStation] text-3xl text-slate-200 text-center'>About</motion.h1>

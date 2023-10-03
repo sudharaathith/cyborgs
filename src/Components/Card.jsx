@@ -48,9 +48,15 @@ const events = [
   },
 ];
 
+const arrow = {
+  initial: { opacity:0, borderTopLeftRadius:"100%", },
+  animate: { opacity:1, borderTopLeftRadius: "0%", },
+}
+
 const Card = () => {
   const [isEventCardVisible, setEventCardVisibility] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
+  const [focus, setFoucus] = useState(null);
 
   const openEventCard = (event) => {
     setSelectedEvent(event);
@@ -81,15 +87,15 @@ const Card = () => {
           }
         `}
       </style>
-      <div className="max-w-7xl mx-auto mb-20 p-4">
+      <div className="  mb-20">
         <motion.h1
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          className="font-bold text-slate-200 font-[UnderStation]  text-3xl text-center mb-16"
+          className="font-bold text-slate-200 font-[UnderStation]  text-2xl sm:text-3xl text-center mb-16"
         >
           <TextChanger textArray={['TECHNICAL EVENTS','TECHNICAL EVENT','Technical Events']} duration={1000} />
         </motion.h1>
-        <div className="mx-auto grid grid-cols mt-40 sm:grid-cols-2 md:mx-52 gap-16 justify-center">
+        <div className=" grid grid-cols mt-40 mx-auto gap-16 sm:gap-auto sm:grid-cols-2 justify-items-center">
           {technicalEvents.map((event, id) => (
             <motion.div
               drag
@@ -107,109 +113,88 @@ const Card = () => {
               }}
               viewport={{ once: true }}
               key={event.id}
-              className="relative group"
-              onClick={() => openEventCard(event)}
+              className="relative group w-72"
             >
-              
-              <div
-                className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500 transform scale-105"
-                style={{
-                  animation: "gradientBorder 4s linear infinite",
-                  borderRadius: "20px",
-                  transition: "background-color 0.3s ease",
-                }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.background =
-                    "linear-gradient(0deg, #3182CE, #93C5FD, #3182CE)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.background =
-                    "linear-gradient(0deg, #3182CE, #93C5FD)")
-                }
-              />
-              <div className="relative px-4 py-6 bg-black bg-opacity-70 ring-1 ring-gray-900/5 rounded-lg leading-none flex flex-col h-96 ">
+            
+              <motion.div initial="initial" whileHover="animate" animate={focus===event.id?"animate":"initial"} className="relative border rounded-lg overflow-hidden px-4 py-6 bg-transparent  bg-opacity-5 ring-1 leading-none flex flex-col h-96 "
+              onHoverEnd={()=>{setFoucus(null)}}
+              onClick={()=>{setFoucus(event.id)}}
+              >
                 {/* <div className="h-40 w-40 mx-auto mb-2">
                   <img src={event.posterUrl} alt={event.title} className="w-full h-full object-cover rounded-lg" />
                 </div> */}
-                <img src={poster} className=" absolute top-0 left-0 w-full h-full" />
-                <p className="font-[UnderStation] text-glow-red text-2xl text-center mb-4">
+                <img src={poster} className=" absolute opacity-70 top-0 left-0 w-full h-full rounded-lg" />
+                <motion.div variants={arrow} transition={{type:"spring", stiffness:99, damping:17}} className=" absolute top-0 left-0 w-full h-full flex flex-col bg-black/60 backdrop-blur-sm ">
+                <p className="font-[UnderStation] text-blue-300 text-2xl text-center mt-11">
                   {event.title}
                 </p>
                 <p className="text-slate-200 text-lg text-center mt-8 mb-4">
                   {event.description}
                 </p>
                 <button
-                  className="relative overflow-hidden font-[UnderStation] text-white bg-gradient-to-r from-purple-500 via-purple-400 to-purple-500 hover:from-purple-400 hover:via-purple-500 hover:to-purple-600 p-3 rounded-lg self-center mt-auto text-lg"
+                  className="relative overflow-hidden mb-6 font-[UnderStation] text-white bg-gradient-to-r  p-3 rounded-lg self-center mt-auto text-lg"
                   onClick={() => openEventCard(event)}
                 >
                   <span className="animate-pulse">View Details</span>
                 </button>
-              </div>
+                </motion.div>
+              </motion.div>
             </motion.div>
           ))}
         </div>
 
         <motion.h2
           initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          className="font-bold text-slate-200 font-[UnderStation] text-3xl text-center mb-16 mt-40"
+          whileInView={{ opacity: 1, x: 0}}
+          className="font-bold text-slate-200 font-[UnderStation] text-2xl sm:text-3xl text-center mb-16 mt-40"
         >
           <TextChanger textArray={['NON-TECHNICAL EVENTS', 'NON TECHNICAL EVENTS', 'NON-TECHNICAL EVENT', 'NON TECHNICAL EVENT']} duration={1000}  />
         </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-40 lg:grid-cols-3 gap-16 justify-center">
+        <div className="grid justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-2 mt-40 lg:grid-cols-3 gap-16 justify-center">
           {nonTechnicalEvents.map((event, id) => (
             <motion.div
-              drag
-              dragConstraints={{
-                top: -0,
-                left: -0,
-                right: 0,
-                bottom: 0,
-              }}
-              viewport={{ once: true }}
-              key={event.id}
-              initial={{ y: -100, opacity: 0 }}
-              whileInView={{
-                y: 0,
-                opacity: 1,
-                transition: { delay: 0.3 + id * 0.2 },
-              }}
-              className="relative group"
+            drag
+            dragConstraints={{
+              top: -0,
+              left: -0,
+              right: 0,
+              bottom: 0,
+            }}
+            initial={{ y: -100, opacity: 0 }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+              transition: { delay: 0.3 + id * 0.2 },
+            }}
+            viewport={{ once: true }}
+            key={event.id}
+            className="relative group w-72"
+          >
+          
+            <motion.div initial="initial" whileHover="animate" animate={focus===event.id?"animate":"initial"} className="relative border rounded-lg overflow-hidden px-4 py-6 bg-transparent  bg-opacity-5 ring-1 leading-none flex flex-col h-96 "
+            onHoverEnd={()=>{setFoucus(null)}}
+            onClick={()=>{setFoucus(event.id)}}
             >
-              <div
-                className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500 transform scale-105"
-                style={{
-                  animation: "gradientBorder 4s linear infinite",
-                  borderRadius: "20px",
-                  transition: "background-color 0.3s ease",
-                }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.background =
-                    "linear-gradient(90deg, #3182CE, #93C5FD, #3182CE)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.background =
-                    "linear-gradient(90deg, #3182CE, #93C5FD)")
-                }
-              />
-              <div className="relative px-4 py-6 bg-black bg-opacity-70 ring-1 ring-gray-900/5 rounded-lg leading-none flex flex-col h-96">
-                {/* <div className="h-40 w-40 mx-auto mb-2">
-                  <img src={event.posterUrl} alt={event.title} className="w-full h-full object-cover rounded-lg" />
-                </div> */}
-                <p className="font-[UnderStation] text-glow-red text-2xl text-center mb-4">
-                  {event.title}
-                </p>
-                <p className="text-cyan-200 text-center text-lg mb-4 mt-8">
-                  {event.description}
-                </p>
-                <button
-                  className="relative overflow-hidden text-white bg-gradient-to-r from-purple-500 via-purple-400 to-purple-500 hover:from-purple-400 hover:via-purple-500 hover:to-purple-600 p-3 rounded-lg self-center mt-auto font-[UnderStation] text-lg"
-                  onClick={() => openEventCard(event)}
-                >
-                  <span className="animate-pulse">View Details</span>
-                </button>
-              </div>
+              {/* <div className="h-40 w-40 mx-auto mb-2">
+                <img src={event.posterUrl} alt={event.title} className="w-full h-full object-cover rounded-lg" />
+              </div> */}
+              <img src={poster} className=" absolute opacity-70 top-0 left-0 w-full h-full rounded-lg" />
+              <motion.div variants={arrow} transition={{type:"spring", stiffness:99, damping:17}} className=" absolute top-0 left-0 w-full h-full flex flex-col bg-black/60 backdrop-blur-sm ">
+              <p className="font-[UnderStation] text-blue-300 text-2xl text-center mt-11">
+                {event.title}
+              </p>
+              <p className="text-slate-200 text-lg text-center mt-8 mb-4">
+                {event.description}
+              </p>
+              <button
+                className="relative overflow-hidden mb-6 font-[UnderStation] text-white bg-gradient-to-r  p-3 rounded-lg self-center mt-auto text-lg"
+                onClick={() => openEventCard(event)}
+              >
+                <span className="animate-pulse">View Details</span>
+              </button>
+              </motion.div>
             </motion.div>
+          </motion.div>
           ))}
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import baffle from "baffle";
 
-const TextChanger = ({ textArray, duration, className }) => {
+const TextChanger = ({ textArray, duration, className, delay=5000 }) => {
   const ref = useRef();
   let r = Math.floor(Math.random() * (textArray.length));
 
@@ -29,7 +29,7 @@ const TextChanger = ({ textArray, duration, className }) => {
       r = t;
       console.log(r)
       transition(textArray[r]);
-    }, 5000);
+    }, delay);
     return () => {
       clearInterval(t);
     };

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import EventCard from "./EventCard";
 import { delay, motion, stagger } from "framer-motion";
+import TextChanger from "./TextChanger";
 
 const events = [
   {
@@ -83,9 +84,9 @@ const Card = () => {
         <motion.h1
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          className="font-bold text-green-200 font-[UnderStation]  text-3xl text-center mb-16"
+          className="font-bold text-slate-200 font-[UnderStation]  text-3xl text-center mb-16"
         >
-          TECHNICAL EVENTS
+          <TextChanger textArray={['TECHNICAL EVENTS']} duration={1000} />
         </motion.h1>
         <div className="mx-auto grid grid-cols mt-40 sm:grid-cols-2 md:mx-52 gap-16 justify-center">
           {technicalEvents.map((event, id) => (
@@ -147,9 +148,9 @@ const Card = () => {
         <motion.h2
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          className="font-bold text-green-200 font-[UnderStation] text-3xl text-center mb-16 mt-40"
+          className="font-bold text-slate-200 font-[UnderStation] text-3xl text-center mb-16 mt-40"
         >
-          NON-TECHNICAL EVENTS
+          <TextChanger textArray={['NON-TECHNICAL EVENTS']} duration={1000} delay={1500} />
         </motion.h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-40 lg:grid-cols-3 gap-16 justify-center">
           {nonTechnicalEvents.map((event, id) => (

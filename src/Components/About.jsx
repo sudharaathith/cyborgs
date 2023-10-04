@@ -39,7 +39,7 @@ function About(props) {
         <motion.h1 style={{y, opacity:o}} className='font-[UnderStation] text-3xl text-slate-200 text-center'>About</motion.h1>
         <div  ref={ref1} className='flex flex-col sm:flex-row mt-28'>
           <motion.img src={logo3} style={{x, opacity:o1}} className='h-52 -z-10 max-sm:mb-11 sm:mr-20' />
-          <motion.p style={{opacity:o2, y:y1}} className='sm:p-20 text-slate-200 m-auto'>SRM Valliammai Engineering college (An Autonomous Institution) was established on September 9, 1999.The SRM Valliammai Engineering College is a part of the SRM Group of Educational Institutions, sponsored by the Valliammai Society.The department of Computer Science and Engineering came into existence from the very inception of the college.</motion.p>
+          <motion.p style={{opacity:o2, y:y1}} className='sm:p-20 text-slate-200 m-auto'>SRM Valliammai Engineering college (An Autonomous Institution) was established on September 9, 1999 and presently conducts 11 Under graduate courses and 8 Post graduate courses. The college has highly qualified, dynamic and dedicated renowned faculty both from academic and industrial background. Besides, the students bring laurels to the college by securing university ranks.The SRM Valliammai Engineering College is a part of the SRM Group of Educational Institutions, sponsored by the Valliammai Society.The department of Computer Science and Engineering came into existence from the very inception of the college.</motion.p>
         </div>
         <div ref={ref2} className='flex flex-col sm:flex-row-reverse mt-20'>
         <motion.img src={logo2} style={{x:x1, opacity:o3}} className='h-52 sm:mr-20' />

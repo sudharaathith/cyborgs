@@ -8,16 +8,9 @@ import Background from "./Components/Background";
 function App() {
   // const location = useLocation();
   return (
-    <BrowserRouter>
     <Background>
-      <Routes>
-      
-        <Route path="/" element={<Home/>} />
-        {/* <Route path='/about' element={<AboutSection/>}/> */}
-        
-        </Routes>
+      <Home />
       </Background>
-    </BrowserRouter>
   );
 }
 

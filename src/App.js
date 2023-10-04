@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Router, Routes, useLocation } from "react-router-
 import Home from "./Page/Home";
 import Background from "./Components/Background";
 
-import AboutSection from './Page/AboutSection';
+// import AboutSection from './Page/AboutSection';
 
 function App() {
   // const location = useLocation();
@@ -13,7 +13,7 @@ function App() {
       <Routes>
       
         <Route path="/" element={<Home/>} />
-        <Route path='/about' element={<AboutSection/>}/>
+        {/* <Route path='/about' element={<AboutSection/>}/> */}
         
         </Routes>
       </Background>

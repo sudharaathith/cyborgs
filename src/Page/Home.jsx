@@ -24,13 +24,13 @@ function Home() {
 
   return (
     <div className="flex flex-col justify-items-center min-h-screen overflow-x-hidden ">
-      <div style={{ height: `${Math.floor(window.innerHeight * 1.4)}px` }} />
+      <div style={{ height: `${Math.floor(window.innerHeight * 1.4)}px` }} id="home" />
       <motion.div className="m-auto text-white flex h-screen  overflow-x-hidden fixed" style={{ opacity }}>
-        <div className="mx-auto sm:my-auto max-sm:gap-6 flex flex-col ">
-          <motion.div className=" fixed top-0 left-0 w-screen h-screen bg-black z-30 border-l" style={{ x }} />
+        <div  className="mx-auto sm:my-auto max-sm:gap-6 flex flex-col ">
+          <motion.div className=" fixed top-0 left-0 w-screen h-screen bg-black z-30 border-l" style={{ x }}  />
           <motion.div className=" fixed top-0 left-0 w-screen h-screen bg-black z-30 border-r" style={{ x: x2 }} />
           <div className=" max-sm:mt-52 flex flex-col">
-            <img
+            <img 
               src={logo}
               className=" sm:h-[30rem] -z-40 sm:mt-0 mx-auto"
             />
@@ -48,17 +48,17 @@ function Home() {
       <motion.div className="flex flex-col h-screen justify-items-center overflow-x-hidden " style={{ opacity: opacity1 }}>
         <Counter />
       </motion.div>
-      <div className=" p-10 flex z-50">
+      <div id="about" className=" p-10 flex z-50">
         <About />
       </div>
-      <div className='z-[60]'>
+      <div id="event"className='z-[60]'>
         <Card />
       </div>
-      <div className='z-50 flex'>
+      <div  className='z-50 flex'>
         <Location />
       </div>
       
-      <Footer />
+      <Footer className='z-[60]' />
     </div>
   );
 }

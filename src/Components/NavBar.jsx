@@ -10,10 +10,11 @@ function NavBar() {
         <motion.img initial={{x:-120}} whileInView={{x:0, transition:{delay:.7}}} src={logo} className=" w-20 h-20" />
       </div>
       <div className="flex justify-stretch gap-5 mx-3">
-        <NavItem  to='/'>Home</NavItem>
+        <NavItem  ><AnchorLink href='#home'>Home</AnchorLink></NavItem>
+        
+        <NavItem   delay=".2" ><AnchorLink href='#about'>About</AnchorLink></NavItem>
         <NavItem  delay=".1"><AnchorLink href='#event'>Event</AnchorLink></NavItem>
-        <NavItem  to='/about' delay=".2">About</NavItem>
-        <NavItem  delay=".3">Contact</NavItem>
+        <NavItem  delay=".3"><AnchorLink href='#contact'>Contact</AnchorLink></NavItem>
       <RegisterButton />
       </div>
     </div>

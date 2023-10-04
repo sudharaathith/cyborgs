@@ -111,7 +111,7 @@ const Card = () => {
                 opacity: 1,
                 transition: { delay: 0.3 + id * 0.2 },
               }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount:.4 }}
               key={event.id}
               className="relative group w-72"
             >
@@ -166,7 +166,7 @@ const Card = () => {
               opacity: 1,
               transition: { delay: 0.3 + id * 0.2 },
             }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount:.4 }}
             key={event.id}
             className="relative group w-72"
           >

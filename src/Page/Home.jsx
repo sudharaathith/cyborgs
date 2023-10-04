@@ -54,7 +54,7 @@ function Home() {
       <div className='z-[60]'>
         <Card />
       </div>
-      <div className='z-50'>
+      <div className='z-50 flex'>
         <Location />
       </div>
       

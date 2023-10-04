@@ -39,7 +39,7 @@ function About(props) {
         <motion.h1 style={{y, opacity:o}} className='font-[UnderStation] text-3xl text-slate-200 text-center mt-10' >About</motion.h1>
         <div  ref={ref1} className='flex flex-col sm:flex-row mt-28'>
           <motion.img src={logo3} style={{x, opacity:o1}} className='h-52 -z-10 max-sm:mb-11 sm:mr-20' />
-          <motion.p style={{opacity:o2, y:y1}} className='sm:p-20 text-slate-200 m-auto'>SRM Valliammai Engineering college (An Autonomous Institution) was established on September 9, 1999.The SRM Valliammai Engineering College is a part of the SRM Group of Educational Institutions, sponsored by the Valliammai Society.The department of Computer Science and Engineering came into existence from the very inception of the college.</motion.p>
+          <motion.p style={{opacity:o2, y:y1}} className='sm:p-20 text-slate-200 m-auto'>SRM Valliammai Engineering college (An Autonomous Institution) was established on September 9, 1999.The SRM Valliammai Engineering College is a part of the SRM Group of Educational Institutions, sponsored by the Valliammai Society. The Valliammai Society was founded by Dr.T.R.Paarivendhar , a well-known educationist, in the name of his mother Tmt. R.Valliammai, under whose care and guidance he attained greater heights in his personal development and whose ideals continue to inspire him.</motion.p>
         </div>
         <div ref={ref2} className='flex flex-col sm:flex-row-reverse mt-28'>
         <motion.img src={logo2} style={{x:x1, opacity:o3}} className='h-52 sm:mr-20' />
@@ -48,7 +48,7 @@ function About(props) {
         </div>
         <div ref={ref3} className='flex flex-col sm:flex-row mt-28'>
           <motion.img src={logo} style={{x:x2, opacity:o4}} className='h-80 sm:mr-20' />
-          <motion.p style={{opacity:o4, y:y3}} className='sm:p-20 text-slate-200 m-auto'>The CSE Department of SRM VALLIAMMAI ENGINEERING COLLEGE is back with the biggest Tech Fest of the year.CYBORGS'23 has been rendered with the most gripping events which will put your skills to the test.Step forward to perserve through a battle of wits and compete in a realm of challenges drafted by our dynamic students where your creativity,logic and knowledge will be required to thrive.</motion.p>
+          <motion.p style={{opacity:o4, y:y3}} className='sm:p-20 text-slate-200 m-auto'>The CSE Department of SRM VALLIAMMAI ENGINEERING COLLEGE is back with the biggest Tech Fest of the year. CYBORGS'23 has been rendered with the most gripping events which will put your skills to the test. Step forward to perserve through a battle of wits and compete in a realm of challenges drafted by our dynamic students where your creativity,logic and knowledge will be required to thrive.</motion.p>
         </div>
     </div>
   )

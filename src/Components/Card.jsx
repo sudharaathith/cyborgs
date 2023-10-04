@@ -92,9 +92,56 @@ const Card = () => {
           whileInView={{ opacity: 1, x: 0 }}
           className="font-bold text-slate-200 font-[UnderStation]  text-2xl sm:text-3xl text-center mb-16"
         >
-          <TextChanger textArray={['TECHNICAL EVENTS','TECHNICAL EVENT','Technical Events']} duration={1000} />
+          <TextChanger textArray={['EVENTS','EVENT','Events']} duration={1000} />
         </motion.h1>
-        <div className=" grid grid-cols mt-40 mx-auto gap-16 sm:gap-auto sm:grid-cols-2 justify-items-center">
+        <div className="grid justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-2 mt-40 lg:grid-cols-3 gap-16">
+          {nonTechnicalEvents.map((event, id) => (
+            <motion.div
+            drag
+            dragConstraints={{
+              top: -0,
+              left: -0,
+              right: 0,
+              bottom: 0,
+            }}
+            initial={{ y: -100, opacity: 0 }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+              transition: { delay: 0.3 + id * 0.2 },
+            }}
+            viewport={{ once: true, amount:.4 }}
+            key={event.id}
+            className="relative group w-72"
+          >
+          
+            <motion.div initial="initial" whileHover="animate" animate={focus===event.id?"animate":"initial"} className="relative border rounded-lg overflow-hidden px-4 py-6 bg-transparent  bg-opacity-5 ring-1 leading-none flex flex-col h-96 "
+            onHoverEnd={()=>{setFoucus(null)}}
+            onClick={()=>{setFoucus(event.id)}}
+            >
+              {/* <div className="h-40 w-40 mx-auto mb-2">
+                <img src={event.posterUrl} alt={event.title} className="w-full h-full object-cover rounded-lg" />
+              </div> */}
+              <img src={poster} className=" absolute opacity-70 top-0 left-0 w-full h-full rounded-lg" />
+              <motion.div variants={arrow} transition={{type:"spring", stiffness:99, damping:17}} className=" absolute top-0 left-0 w-full h-full flex flex-col bg-black/60 backdrop-blur-sm ">
+              <p className="font-[UnderStation] text-blue-300 text-2xl text-center mt-11">
+                {event.title}
+              </p>
+              <p className="text-slate-200 text-lg text-center mt-8 mb-4">
+                {event.description}
+              </p>
+              <button
+                className="relative overflow-hidden mb-6 font-[UnderStation] text-white bg-gradient-to-r  p-3 rounded-lg self-center mt-auto text-lg"
+                onClick={() => openEventCard(event)}
+              >
+                <span className="animate-pulse">View Details</span>
+              </button>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+          ))}
+        </div>
+        <div className=" grid grid-cols mt-40 sm:gap-auto sm:grid-cols-2 justify-items-center">
           {technicalEvents.map((event, id) => (
             <motion.div
               drag
@@ -142,60 +189,7 @@ const Card = () => {
           ))}
         </div>
 
-        <motion.h2
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0}}
-          className="font-bold text-slate-200 font-[UnderStation] text-2xl sm:text-3xl text-center mb-16 mt-40"
-        >
-          <TextChanger textArray={['NON-TECHNICAL EVENTS', 'NON TECHNICAL EVENTS', 'NON-TECHNICAL EVENT', 'NON TECHNICAL EVENT']} duration={1000}  />
-        </motion.h2>
-        <div className="grid justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-2 mt-40 lg:grid-cols-3 gap-16 justify-center">
-          {nonTechnicalEvents.map((event, id) => (
-            <motion.div
-            drag
-            dragConstraints={{
-              top: -0,
-              left: -0,
-              right: 0,
-              bottom: 0,
-            }}
-            initial={{ y: -100, opacity: 0 }}
-            whileInView={{
-              y: 0,
-              opacity: 1,
-              transition: { delay: 0.3 + id * 0.2 },
-            }}
-            viewport={{ once: true, amount:.4 }}
-            key={event.id}
-            className="relative group w-72"
-          >
-          
-            <motion.div initial="initial" whileHover="animate" animate={focus===event.id?"animate":"initial"} className="relative border rounded-lg overflow-hidden px-4 py-6 bg-transparent  bg-opacity-5 ring-1 leading-none flex flex-col h-96 "
-            onHoverEnd={()=>{setFoucus(null)}}
-            onClick={()=>{setFoucus(event.id)}}
-            >
-              {/* <div className="h-40 w-40 mx-auto mb-2">
-                <img src={event.posterUrl} alt={event.title} className="w-full h-full object-cover rounded-lg" />
-              </div> */}
-              <img src={poster} className=" absolute opacity-70 top-0 left-0 w-full h-full rounded-lg" />
-              <motion.div variants={arrow} transition={{type:"spring", stiffness:99, damping:17}} className=" absolute top-0 left-0 w-full h-full flex flex-col bg-black/60 backdrop-blur-sm ">
-              <p className="font-[UnderStation] text-blue-300 text-2xl text-center mt-11">
-                {event.title}
-              </p>
-              <p className="text-slate-200 text-lg text-center mt-8 mb-4">
-                {event.description}
-              </p>
-              <button
-                className="relative overflow-hidden mb-6 font-[UnderStation] text-white bg-gradient-to-r  p-3 rounded-lg self-center mt-auto text-lg"
-                onClick={() => openEventCard(event)}
-              >
-                <span className="animate-pulse">View Details</span>
-              </button>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-          ))}
-        </div>
+        
       </div>
 
       {isEventCardVisible && selectedEvent && (

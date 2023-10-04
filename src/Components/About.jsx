@@ -36,19 +36,19 @@ function About(props) {
   const o4 = useTransform(s3 ,[ 0, .5], [0,1]);
   return (
     <div className='h-fit rounded-xl backdrop-blur-xl sm:p-3 w-full shadow-blue-600'>
-        <motion.h1 style={{y, opacity:o}} className='font-[UnderStation] text-3xl text-slate-200 text-center mt-10' >About</motion.h1>
+        <motion.h1 style={{y, opacity:o}} className='font-[UnderStation] text-3xl text-slate-200 text-center'>About</motion.h1>
         <div  ref={ref1} className='flex flex-col sm:flex-row mt-28'>
           <motion.img src={logo3} style={{x, opacity:o1}} className='h-52 -z-10 max-sm:mb-11 sm:mr-20' />
-          <motion.p style={{opacity:o2, y:y1}} className='sm:p-20 text-slate-200 m-auto'>SRM Valliammai Engineering college (An Autonomous Institution) was established on September 9, 1999.The SRM Valliammai Engineering College is a part of the SRM Group of Educational Institutions, sponsored by the Valliammai Society. The Valliammai Society was founded by Dr.T.R.Paarivendhar , a well-known educationist, in the name of his mother Tmt. R.Valliammai, under whose care and guidance he attained greater heights in his personal development and whose ideals continue to inspire him.</motion.p>
+          <motion.p style={{opacity:o2, y:y1}} className='sm:p-20 text-slate-200 m-auto'>SRM Valliammai Engineering college (An Autonomous Institution) was established on September 9, 1999.The SRM Valliammai Engineering College is a part of the SRM Group of Educational Institutions, sponsored by the Valliammai Society.The department of Computer Science and Engineering came into existence from the very inception of the college.</motion.p>
         </div>
-        <div ref={ref2} className='flex flex-col sm:flex-row-reverse mt-28'>
+        <div ref={ref2} className='flex flex-col sm:flex-row-reverse mt-20'>
         <motion.img src={logo2} style={{x:x1, opacity:o3}} className='h-52 sm:mr-20' />
           <motion.p style={{opacity:o3, y:y2}} className='sm:p-20 text-slate-200 m-auto'>A silver jubilee is a milestone of 25 years, a testament to unwavering dedication and resilience. It signifies a journey enriched with memories, challenges, and triumphs. As the silver thread of time weaves through this quarter-century, it promises a future filled with continued commitment and even brighter achievements.</motion.p>
           
         </div>
-        <div ref={ref3} className='flex flex-col sm:flex-row mt-28'>
+        <div ref={ref3} className='flex flex-col sm:flex-row mt-20'>
           <motion.img src={logo} style={{x:x2, opacity:o4}} className='h-80 sm:mr-20' />
-          <motion.p style={{opacity:o4, y:y3}} className='sm:p-20 text-slate-200 m-auto'>The CSE Department of SRM VALLIAMMAI ENGINEERING COLLEGE is back with the biggest Tech Fest of the year. CYBORGS'23 has been rendered with the most gripping events which will put your skills to the test. Step forward to perserve through a battle of wits and compete in a realm of challenges drafted by our dynamic students where your creativity,logic and knowledge will be required to thrive.</motion.p>
+          <motion.p style={{opacity:o4, y:y3}} className='sm:p-20 text-slate-200 m-auto'>The CSE Department of SRM VALLIAMMAI ENGINEERING COLLEGE is back with the biggest Tech Fest of the year.CYBORGS'23 has been rendered with the most gripping events which will put your skills to the test.Step forward to perserve through a battle of wits and compete in a realm of challenges drafted by our dynamic students where your creativity,logic and knowledge will be required to thrive.</motion.p>
         </div>
     </div>
   )

@@ -3,7 +3,7 @@ import image from '../Image/Cyborgs.gif'
 
 function Loader({children}) {
     
-  const[show, setShow]=useState(true);
+  const[show, setShow]=useState(false);
   useEffect(()=>{setTimeout(()=>{setShow(false)},800)},[])
   return (
     <>

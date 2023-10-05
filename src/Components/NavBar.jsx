@@ -5,14 +5,14 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function NavBar() {
   return (
-    <div className=" backdrop-blur-xl z-[100] hidden fixed top-0 w-screen bg-orange-500/5 text-violet-300  px-5 py-2 sm:flex flex-row justify-between items-center  overflow-x-hidden">
+    <div className=" navbar backdrop-blur-xl z-[99]  fixed top-0 w-screen bg-orange-500/5 text-violet-300  px-5 py-2 sm:flex flex-row justify-between items-center  overflow-x-hidden">
       <div className=" flex flex-row mx-7">
         <motion.img initial={{x:-120}} whileInView={{x:0, transition:{delay:.7}}} src={logo} className=" w-20 h-20" />
       </div>
       <div className="flex justify-stretch gap-5 mx-3">
         <NavItem  ><AnchorLink href='#home'>Home</AnchorLink></NavItem>
         
-        <NavItem   delay=".2" ><AnchorLink href='#about'>About</AnchorLink></NavItem>
+        <NavItem   delay=".2" ><AnchorLink href='#about1'>About</AnchorLink></NavItem>
         <NavItem  delay=".1"><AnchorLink href='#event'>Event</AnchorLink></NavItem>
         <NavItem  delay=".3"><AnchorLink href='#contact'>Contact</AnchorLink></NavItem>
       <RegisterButton />

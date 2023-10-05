@@ -6,7 +6,8 @@ import Item from './Item';
 import { ADDRESS,NAME,EMAIL,PHONENUMBER } from './Menu'; 
 
 
-import { BsInstagram,BsFacebook,BsLinkedin,BsWhatsapp } from "react-icons/bs"
+import { BsInstagram,BsFacebook,BsLinkedin,BsWhatsapp,} from "react-icons/bs"
+import {BiLogoGmail} from "react-icons/bi"
 import {SiThreads} from "react-icons/si"
 
 const Footer = () => {
@@ -22,17 +23,16 @@ const Footer = () => {
             <Item Links={PHONENUMBER} title="PHONE NUMBER"  />
             
         </div>
-        <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 bg-[#ffffff19] py-4">
+        <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 bg-[#ffffff19] py-4 z-[60]">
             <div className='container  mx-auto flex items-center justify-center '>
-                <BsInstagram size = "2rem" className='mx-5' color="#938BDC" />
-                <BsFacebook size = "2rem" className='mx-5'color="#938BDC"/>
-                <SiThreads size="2rem" className='mx-5'color="#938BDC"/>
+                <a style={{zIndex: '90'}} href='https://www.instagram.com/cyborgs_23/'><BsInstagram size = "2rem" className='mx-5' color="#938BDC" /></a>
+                <a style={{zIndex: '90'}} href=''><BsFacebook size = "2rem" className='mx-5'color="#938BDC"/></a>
+                <a style={{zIndex: '90'}} href='https://www.threads.net/@cyborgs_23'><SiThreads size="2rem" className='mx-5'color="#938BDC"/></a>
                 <BsLinkedin size="2rem" className='mx-5'color="#938BDC"/>
-                <BsWhatsapp size="2rem" className='mx-5'color="#938BDC"/>
+                <a style={{zIndex: '90'}} href='https://whatsapp.com/channel/0029VaBBhsqFXUuh631yrX45'><BsWhatsapp size="2rem" className='mx-5'color="#938BDC"/></a>
+                <a style={{zIndex: '90'}} href='https://whatsapp.com/channel/0029VaBBhsqFXUuh631yrX45'><BiLogoGmail size = "2.5rem" className='mx-5' color="#938BDC" /></a>
             </div>
-            
         </div>
-      
     </footer> 
    
 

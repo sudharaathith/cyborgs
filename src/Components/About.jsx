@@ -24,7 +24,7 @@ function About(props) {
   }).scrollYProgress;
   const y = useTransform(scrollY ,[ window.innerHeight*1.5, window.innerHeight*2.6], [100, 0]);
   const o = useTransform(scrollY ,[ window.innerHeight*1.5, window.innerHeight*2], [0, 1]);
-  const x = useTransform(s1 ,[ 0, .7], [30, 0]);
+  const x = useTransform(s1 ,[ 0, .5], [30, 0]);
   const o1 = useTransform(s1 ,[ 0,.5], [0,1]);
   const y1 = useTransform(s1 ,[ 0,.5], [300, 0]);
   const o2 = useTransform(s1 ,[ 0,.5], [0,1]);

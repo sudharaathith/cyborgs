@@ -50,7 +50,6 @@ function Home() {
         <Counter />
       </motion.div>
       <div id="about" className=" p-10 flex z-50">
-        <GlitchText />
         <About />
       </div>
       <div id="event"className='z-[60]'>

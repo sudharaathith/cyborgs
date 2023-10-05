@@ -141,7 +141,7 @@ const Card = () => {
           </motion.div>
           ))}
         </div>
-        <div className=" grid grid-cols mt-40 sm:gap-auto sm:grid-cols-2 justify-items-center gap-16">
+        <div className=" grid grid-cols mt-40 sm:gap-auto sm:grid-cols-2 justify-items-center ">
           {technicalEvents.map((event, id) => (
             <motion.div
               drag

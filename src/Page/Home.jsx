@@ -3,11 +3,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Counter from "../Components/Counter";
 import TextChanger from "../Components/TextChanger";
 
-import logo from "../Image/Text2.gif";
+import logo from "../Image/Text3.gif";
 import Footer from "../Components/Footer";
 import About from "../Components/About";
 import Card from "../Components/Card";
 import Location from "../Components/Location";
+import GlitchText from "../Components/GlitchText";
 
 function Home() {
   const { scrollY } = useScroll();
@@ -49,6 +50,7 @@ function Home() {
         <Counter />
       </motion.div>
       <div id="about" className=" p-10 flex z-50">
+        <GlitchText />
         <About />
       </div>
       <div id="event"className='z-[60]'>

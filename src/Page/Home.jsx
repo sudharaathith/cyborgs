@@ -8,6 +8,7 @@ import Footer from "../Components/Footer";
 import About from "../Components/About";
 import Card from "../Components/Card";
 import Location from "../Components/Location";
+import Hamburger from "../Components/Hamburger";
 
 function Home() {
   const { scrollY } = useScroll();
@@ -23,7 +24,7 @@ function Home() {
   const delay = 1000;
 
   return (
-    <div className="flex flex-col justify-items-center min-h-screen overflow-x-hidden ">
+    <div className="flex flex-col relative justify-items-center min-h-screen overflow-x-hidden ">
       <div style={{ height: `${Math.floor(window.innerHeight * 1.4)}px` }} id="home" />
       <motion.div className="m-auto text-white flex h-screen  overflow-x-hidden fixed" style={{ opacity }}>
         <div  className="mx-auto sm:my-auto max-sm:gap-6 flex flex-col ">
@@ -48,7 +49,7 @@ function Home() {
       <motion.div className="flex flex-col h-screen justify-items-center overflow-x-hidden " style={{ opacity: opacity1 }}>
         <Counter />
       </motion.div>
-      <div id="about" className=" p-10 flex z-50">
+      <div id="about" className=" mt-1 flex z">
         <About />
       </div>
       <div id="event"className='z-[60]'>
@@ -58,7 +59,8 @@ function Home() {
         <Location />
       </div>
       
-      <Footer className='z-[60]' />
+      <Footer  />
+  
     </div>
   );
 }

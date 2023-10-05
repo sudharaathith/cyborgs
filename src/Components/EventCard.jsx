@@ -4,19 +4,19 @@ const EventCard = ({ onClose, event }) => {
   const posterUrl = event.posterUrl || ''; 
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-[70]">
+    <div className="fixed inset-0 flex items-center justify-center z-[170]">
       <div className="sm:h-3/4 sm:w-3/4  z-[80] max-w-4xl mx-auto bg-black rounded-lg shadow-lg p-6 flex relative border border-gradient-to-r from-blue-600 to-slate-200">
 
         {/* <div className="w-1/3">
           <img src={posterUrl} alt="Event Poster" className="w-full h-full object-cover rounded-lg" />
         </div> */}
 
-        <div className="sm:w-2/3 px-6 mx-auto justify-center z-[70]">
+        <div className=" scroll sm:w-2/3 px-6 mx-auto justify-center relative z-[100] overflow-y-scroll ">
           <h2 className="text-3xl font-bold text-slate-200 mb-4">{event.title}</h2>
           {/* <p className="text-slate-200 text-lg mb-4">{event.description}</p> */}
           <h3 className="text-xl font-semibold text-slate-200 mb-2">Event Details:</h3>
-          <p className="text-slate-200 mb-2">{event.round1}</p>
-          <p className="text-slate-200 mb-4">{event.round2}</p>
+          <p className="text-slate-200 mb-2">{event.round}</p>
+          {/* <p className="text-slate-200 mb-4">{event.round2}</p> */}
 
           {/* <h3 className="text-xl font-semibold text-slate-200 mb-2">Coordinators:</h3>
           <p className="text-slate-200 mb-2">Coordinator 1: {event.coordinator1}</p>
@@ -46,3 +46,23 @@ const EventCard = ({ onClose, event }) => {
 };
 
 export default EventCard;
+// import React from 'react'
+// import styled from 'styled-components'
+
+// const EventCard = ({onClose, event}) => {
+//   return (
+//     <Main>  
+//       dfgfdgfsdgfds
+//     </Main>
+//   )
+// }
+
+// export default EventCard
+
+// const Main = styled.div`
+//   position: absolute;
+//   top: 0;
+//   width: 80vw;
+//   height: 70vh;
+//   background-color: rgba(171, 47, 47, 0.7);
+// `;

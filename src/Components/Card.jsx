@@ -9,7 +9,28 @@ const events = [
     id: 1,
     title: "Paper Portico",
     description: "Show your craftmanship and presentation abilities in 'Paper Portico' as you express your opinions on grossing topics.",
-    round: "Round 1: Written test on algorithms and data structures.",
+    round: `Team Formation: \n
+    1. The team can have a maximum of 3 participants from B.Tech/B. E/ Diploma. \n
+    2. No participants can be part of more than one team. \n
+    3. It is not necessary that the participants forming a team should be from the same college. \n
+    \n
+    Basic instructions: 
+    1.All topics related to recent trends and technologies are invited. \n
+    2.Mail your abstracts to cyborgs2k23@gmail.com on or before October 21. \n
+    3.The notification of acceptance of abstracts will be sent to you via mail \n
+    4. The selected teams have to bring a soft copy of the paper in a CD/USB Device and 2 hard copies of the paper at the time of presentation.\n
+    5.The decision of the judges and the event heads shall be treated as final. \n
+    6.No restrictions on presentation format \n
+    7.Copying from the internet is not encouraged. \n
+    8.Evaluation based on relevance, content, uniqueness, and application. \n
+    9.The abstract should not exceed 250 words and must be in word/pdf format.\n
+    \n
+    Presentation rules: \n
+    1.The paper submitted will have to be presented during the event. \n
+    2.Hard copies of the same are to be submitted before presentation to Judges \n
+    3. The maximum duration of the presentation is 12 minutes \n
+    4. The participants will have to present their papers in MS PowerPoint (ppt) format only.`,
+
     round2: "Round 2: Live coding challenge on a real-world problem.",
     type: "Technical",
     posterUrl: {poster},
@@ -141,51 +162,51 @@ const Card = () => {
           </motion.div>
           ))}
         </div>
-        <div className=" grid grid-cols mt-40 sm:gap-auto sm:grid-cols-2 justify-items-center ">
+        <div className="grid justify-items-center mt-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-16">
           {technicalEvents.map((event, id) => (
             <motion.div
-              drag
-              dragConstraints={{
-                top: -0,
-                left: -0,
-                right: 0,
-                bottom: 0,
-              }}
-              initial={{ y: -100, opacity: 0 }}
-              whileInView={{
-                y: 0,
-                opacity: 1,
-                transition: { delay: 0.3 + id * 0.2 },
-              }}
-              viewport={{ once: true, amount:.4 }}
-              key={event.id}
-              className="relative group w-72"
+            drag
+            dragConstraints={{
+              top: -0,
+              left: -0,
+              right: 0,
+              bottom: 0,
+            }}
+            initial={{ y: -100, opacity: 0 }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+              transition: { delay: 0.3 + id * 0.2 },
+            }}
+            viewport={{ once: true, amount:.4 }}
+            key={event.id}
+            className="relative group w-72"
+          >
+          
+            <motion.div initial="initial" whileHover="animate" animate={focus===event.id?"animate":"initial"} className="relative border rounded-lg overflow-hidden px-4 py-6 bg-transparent  bg-opacity-5 ring-1 leading-none flex flex-col h-96 "
+            onHoverEnd={()=>{setFoucus(null)}}
+            onClick={()=>{setFoucus(event.id)}}
             >
-            
-              <motion.div initial="initial" whileHover="animate" animate={focus===event.id?"animate":"initial"} className="relative border rounded-lg overflow-hidden px-4 py-6 bg-transparent  bg-opacity-5 ring-1 leading-none flex flex-col h-96 "
-              onHoverEnd={()=>{setFoucus(null)}}
-              onClick={()=>{setFoucus(event.id)}}
+              {/* <div className="h-40 w-40 mx-auto mb-2">
+                <img src={event.posterUrl} alt={event.title} className="w-full h-full object-cover rounded-lg" />
+              </div> */}
+              <img src={poster} className=" absolute opacity-70 top-0 left-0 w-full h-full rounded-lg" />
+              <motion.div variants={arrow} transition={{type:"spring", stiffness:99, damping:17}} className=" absolute top-0 left-0 w-full h-full flex flex-col bg-black/60 backdrop-blur-sm ">
+              <p className="font-[UnderStation] text-blue-300 text-2xl text-center mt-11">
+                {event.title}
+              </p>
+              <p className="text-slate-200 text-lg text-center mt-8 mb-4">
+                {event.description}
+              </p>
+              <button
+                className="relative overflow-hidden mb-6 font-[UnderStation] text-white bg-gradient-to-r  p-3 rounded-lg self-center mt-auto text-lg"
+                onClick={() => openEventCard(event)}
               >
-                {/* <div className="h-40 w-40 mx-auto mb-2">
-                  <img src={event.posterUrl} alt={event.title} className="w-full h-full object-cover rounded-lg" />
-                </div> */}
-                <img src={poster} className=" absolute opacity-70 top-0 left-0 w-full h-full rounded-lg" />
-                <motion.div variants={arrow} transition={{type:"spring", stiffness:99, damping:17}} className=" absolute top-0 left-0 w-full h-full flex flex-col bg-black/60 backdrop-blur-sm ">
-                <p className="font-[UnderStation] text-blue-300 text-2xl text-center mt-11">
-                  {event.title}
-                </p>
-                <p className="text-slate-200 text-lg text-center mt-8 mb-4">
-                  {event.description}
-                </p>
-                <button
-                  className="relative overflow-hidden mb-6 font-[UnderStation] text-white bg-gradient-to-r  p-3 rounded-lg self-center mt-auto text-lg"
-                  onClick={() => openEventCard(event)}
-                >
-                  <span className="animate-pulse">View Details</span>
-                </button>
-                </motion.div>
+                <span className="animate-pulse">View Details</span>
+              </button>
               </motion.div>
             </motion.div>
+          </motion.div>
           ))}
         </div>
 

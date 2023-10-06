@@ -49,7 +49,7 @@ function Home() {
       <motion.div className="flex flex-col h-screen justify-items-center overflow-x-hidden " style={{ opacity: opacity1 }}>
         <Counter />
       </motion.div>
-      <div id="about" className=" mt-1 flex z">
+      <div id="about" className=" flex z">
         <About />
       </div>
       <div id="event"className='z-[60]'>

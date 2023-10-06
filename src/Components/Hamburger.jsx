@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import menu from '../Image/hamburger.svg'
+import menu from '../Image/hamburger1.svg'
 import styled from 'styled-components'
 import cross from '../Image/cross.svg'
 import logo from '../Image/Logo512.png'

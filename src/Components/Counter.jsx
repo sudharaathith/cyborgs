@@ -58,7 +58,7 @@ const Counter = () => {
 const CountdownItem = ({ num, text, delay }) => {
   return (
     <motion.div
-      className="font-mono w-1/4 h-24 md:h-36 flex flex-col gap-1 rounded-xl md:gap-2 items-center justify-center border-r-[1px] border-transparent last:border-none bg-black"
+      className="font-mono w-1/4 h-24 md:h-36 flex flex-col my-8 gap-1 rounded-xl md:gap-2 items-center justify-center border-r-[1px] border-transparent last:border-none bg-black"
       initial={{ rotateX: -90, y: -100 }}
       whileInView={{ rotateX: 0, y: 0, transition: { delay: 0.5 + delay } }}
       viewport={{ once: true }}
@@ -71,7 +71,7 @@ const CountdownItem = ({ num, text, delay }) => {
             animate={{ y: "0%" }}
             exit={{ y: "-100%" }}
             transition={{ ease: "backIn", duration: 0.75 }}
-            className="block text-2xl md:text-4xl font-[UnderStation] lg:text-6xl xl:text-7xl text-violet-600 font-medium"
+            className="block text-5xl md:text-4xl font-[UnderStation] lg:text-6xl xl:text-7xl text-violet-300 font-medium"
           >
             {num}
           </motion.span>

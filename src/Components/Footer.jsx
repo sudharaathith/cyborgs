@@ -6,9 +6,10 @@ import Item from './Item';
 import { ADDRESS,NAME,EMAIL,PHONENUMBER } from './Menu'; 
 
 
-import { BsInstagram,BsFacebook,BsLinkedin,BsWhatsapp,} from "react-icons/bs"
+import { BsInstagram,BsFacebook,BsLinkedin,BsWhatsapp} from "react-icons/bs"
 import {BiLogoGmail} from "react-icons/bi"
 import {SiThreads} from "react-icons/si"
+import {FaXTwitter} from "react-icons/fa6"
 
 const Footer = () => {
   return (
@@ -21,17 +22,20 @@ const Footer = () => {
             <Item Links={NAME} title="NAME"  />
             <Item Links={EMAIL} title="EMAIL"  />
             <Item Links={PHONENUMBER} title="PHONE NUMBER"  />
-            
         </div>
         <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 bg-[#ffffff19] py-4 z-[60]">
             <div className='container  mx-auto flex items-center justify-center '>
-                <a style={{zIndex: '90'}} href='https://www.instagram.com/cyborgs_23/'><BsInstagram size = "2rem" className='mx-5' color="#938BDC" /></a>
-                <a style={{zIndex: '90'}} href=''><BsFacebook size = "2rem" className='mx-5'color="#938BDC"/></a>
-                <a style={{zIndex: '90'}} href='https://www.threads.net/@cyborgs_23'><SiThreads size="2rem" className='mx-5'color="#938BDC"/></a>
-                <BsLinkedin size="2rem" className='mx-5'color="#938BDC"/>
-                <a style={{zIndex: '90'}} href='https://whatsapp.com/channel/0029VaBBhsqFXUuh631yrX45'><BsWhatsapp size="2rem" className='mx-5'color="#938BDC"/></a>
-                <a style={{zIndex: '90'}} href='https://whatsapp.com/channel/0029VaBBhsqFXUuh631yrX45'><BiLogoGmail size = "2.5rem" className='mx-5' color="#938BDC" /></a>
+                <a style={{zIndex: '90'}} href='https://www.instagram.com/cyborgs_23/'><BsInstagram className='mx-3 sm:mx-5 w-[2rem] h-[2rem]' color="#938BDC" /></a>
+                <a style={{zIndex: '90'}} href='https://www.facebook.com/profile.php?id=61551884400584'><BsFacebook className='mx-3 sm:mx-5 w-[2rem] h-[2rem]'color="#938BDC"/></a>
+                <a style={{zIndex: '90'}} href='https://www.threads.net/@cyborgs_23'><SiThreads className='mx-3 sm:mx-5 w-[2rem] h-[2rem]'color="#938BDC"/></a>
+                <a style={{zIndex: '90'}} href=''><BsLinkedin className='mx-3 sm:mx-5 w-[2rem] h-[2rem]'color="#938BDC"/></a>
+                <a style={{zIndex: '90'}} href='https://whatsapp.com/channel/0029VaBBhsqFXUuh631yrX45'><BsWhatsapp className='mx-3 sm:mx-5 w-[2rem] h-[2rem]'color="#938BDC"/></a>
+                <a style={{zIndex: '90'}} href='cyborgs2023@gmail.com'><BiLogoGmail className='mx-3 sm:mx-5 w-[2rem] h-[2rem]' color="#938BDC" /></a>
+                <a style={{zIndex: '90'}} href='https://twitter.com/CYBORGS_SRM_VEC'><FaXTwitter  className='mx-3 sm:mx-5 w-[2rem] h-[2rem]'color="#938BDC"/></a>
             </div>
+        </div>
+        <div>
+            
         </div>
     </footer> 
    

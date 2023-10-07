@@ -188,7 +188,11 @@
     padding-bottom:15px ;
   }
   .glich{
-    margin-top: 15px;
+    /* margin-top: 0; */
+    width:100vw;
+    height: 50vh;
+    /* background-color: aqua; */
+    /* display: none; */
   }
   .cse{
     /* margin-top: 70px;
@@ -197,7 +201,7 @@
   }
   .info{
     display:block;
-    font-family: trigram;
+    font-family:Stylish-Regular;
     text-align:center;
     position: absolute;
     padding:0 15px;
@@ -209,7 +213,9 @@
   }
   .cy_glich{
     /* background-color: #B2A9F1; */
-    height:70vh;
+    height:80vh;
+    margin-top: 18vh;
+    /* display: none; */
     /* background-color: #B2A9F1; */
   }
   .date{

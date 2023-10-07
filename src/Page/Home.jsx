@@ -37,7 +37,7 @@ function Home() {
             />
             <div>
               <TextChanger
-                className="mx-auto text-center -z-10 font-[] w-screen text-slate-200 font-semibold text-xl"
+                className="mx-auto text-center -z-10 font-[] w-screen text-orange-200 font-semibold text-xl"
                 textArray={textArray}
                 duration={duration}
                 delay={delay}

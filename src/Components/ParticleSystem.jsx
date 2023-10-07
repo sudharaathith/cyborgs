@@ -39,7 +39,7 @@ class ParticleSystem extends Component {
       vx: (Math.random() - 0.5) * 2,
       vy: (Math.random() - 0.5) * 2,
       radius: window.innerWidth < 600 ? 120 : 200,
-      color: `rgba(5, ${Math.floor(Math.random()*190)}, 133, 0.2)`,
+      color: `rgba(240,67,69, 0.2)`,
     };
   }
 

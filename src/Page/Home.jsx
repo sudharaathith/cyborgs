@@ -20,12 +20,13 @@ function Home() {
   const textArray = [
     "SRM Valliammai Engineering College",
     "By the Department of Computer Science and Engineering",
-    "A National Level Technical Symposium 2K23"
+    "A National Level Technical Symposium 2K23",
+    "Celebrating our 13th year of Orchestrating the Prestigious Symposium"
   ];
   const textArray1 = [
     "SRM Valliammai Engineering College",
     "Department of Computer Science & Engineering",
-    // "A National Level Technical Symposium 2K23"
+    "The Symposium is on its 13th year"
   ];
   const duration = 1000; // Animation duration in milliseconds
   const delay = 1000;

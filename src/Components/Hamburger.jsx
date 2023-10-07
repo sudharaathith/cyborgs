@@ -22,7 +22,7 @@ export default function Hamburger() {
           <a href="#about1">ABOUT</a>
           <a href="#event">EVENTS</a>
           <a href="#contact">CONTACT</a>
-          <a href="https://forms.gle/LCG48PTf4GSunTTw5" target='_blank'>REGISTER</a>
+          <a href="https://forms.gle/7SrbYJdiAnknXV5v8" target='_blank'>REGISTER</a>
       </div>
     </Ham>
   )

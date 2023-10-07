@@ -47,7 +47,8 @@ const events = [
     title: "The Bunker Dilemma",
     description: "Your life is on the line. You are provided with a chance to negotiate for your survival. Solve 'The bunker dilemma' and be the last person standing.",
     round:  () => (
-      <div>'CYBORGS 2K23: Survival Challenge - The Bunker Dilemma' immerses participants in a heart-pounding scenario where a nuclear threat looms. In Round 1, 20 contestants must vie for just 10 bunker spots by artfully persuading organizers of their unique qualifications, whether they excel in engineering, medicine, leadership, or problem-solving. Round 2 introduces psychological trials, further pushing contestants to their limits. This event is an electrifying blend of strategic thinking, persuasive communication, and emotional resilience. To secure a coveted spot in the bunker, participants must not only demonstrate their practical prowess but also prove their mettle under intense psychological pressure, making it an unforgettable and thrilling experience."</div>),
+      <div>'CYBORGS 2K23: Survival Challenge - The Bunker Dilemma' immerses participants in a heart-pounding scenario where a nuclear threat looms.<br /><br />
+      Round 1: <br />20 contestants must vie for just 10 bunker spots by artfully persuading organizers of their unique qualifications, whether they excel in engineering, medicine, leadership, or problem-solving. <br /><br />Round 2<br /> introduces psychological trials, further pushing contestants to their limits. This event is an electrifying blend of strategic thinking, persuasive communication, and emotional resilience. To secure a coveted spot in the bunker, participants must not only demonstrate their practical prowess but also prove their mettle under intense psychological pressure, making it an unforgettable and thrilling experience."</div>),
     type: "Non-Technical",
     posterUrl: '/Posters/bunker.png',
   },
@@ -56,7 +57,18 @@ const events = [
     title: "Code Mystique",
     description: "A Tech Fest without a coding event? Do not worry,coding enthusiasts. 'Code Mystique' is here to put your technical skills to test as you race against time.",
     round: () => (
-      <div>Code Mystique - CYBORGS 2K23 offers a technical group event with two exciting rounds. In Round 1, 'SHOT-TWISTER' teams of 2-4 members compete by delivering tongue twisters with water in their mouths, aiming for clarity to earn points. Round 2, 'Pseudo hunt' narrows it down to 5 teams. They answer questions to receive pseudocode clues, leading to the next step in a chain. The final clue guides teams to a coding challenge on platforms like HackerRank or CodeChef, where they must collaborate to solve and pass all test cases to emerge victorious. It's a thrilling test of technical skill and teamwork.",</div>),
+      <div>Code Mystique - CYBORGS 2K23 offers a technical group event with two exciting rounds.<br /><br />
+      Round 1 - PuzzleFest:<br />
+      1.Each team will consist of three members.<br />
+      2.Teams will be provided with three different puzzles to solve.<br />
+      3.Work together to solve the puzzles.<br />
+      4.There will be a set time limit for each round.<br />
+      5.The top five teams with the fastest puzzle-solving times will advance to the next round.<br />
+      Round 2 - CodeMystique:<br /><br />
+      1.A total of 5 teams will be shortlisted from the first round.<br />
+      2.Initially, a question will be presented to all teams simultaneously. The team that correctly answers first will be awarded the first clue.<br />
+      3.Each clue provided will be in the form of pseudocode. Solving the pseudocode will lead you to the answer, which in turn contains the clue to the next pseudocode. <br />
+      4.The final clue in the chain will lead your team to a challenging problem hosted on platforms like HackerRank or CodeChef. Your team must work together to write code and pass all the test case<br /></div>),
     round2: "Round 2: 'Pseudo hunt,'' narrows it down to 5 teams. They answer questions to receive pseudocode clues, leading to the next step in a chain. The final clue guides teams to a coding challenge on platforms like HackerRank or CodeChef",
     type: "Technical",
     posterUrl: '/Posters/codemystique.png',
@@ -66,7 +78,29 @@ const events = [
     title: "Cybrogs-League",
     description: "Attention all gamers. AFK for a long time? Jump into action with our Gaming event 'Cyborgs-League' and show them who is the boss.",
     round: () => (
-      <div>CYBORGS 2K23: Cybrogs-League - Where players can showcase their skills in this fast-paced esports game. The tournament format adapts to the number of participants, with the potential for 2v2 matches for larger groups. Each match has a 5 to 7-minute time limit, ensuring quick and intense gameplay. While laptops and controllers are provided, participants are welcome to bring their own equipment. In Round 1, teams compete in eliminator rounds until only two remain. Round 2 features a best-of-three format, where a team must win two out of three matches to emerge as the victor, while the other team takes the runner-up position. It's an opportunity for Rocket League enthusiasts to demonstrate their prowess and claim the title at CYBORGS 2K23.",</div>),
+      <div>Cyborgs League - Two Games Will be conducted and Participants will be able to choose between them<br />
+      <br />
+      GAME 1:Rocket League<br />
+      BASIC INSTRUCTIONS:<br />
+      1.The tournament format adapts to the number of participants  with the potential for 2v2 matches for larger groups.<br />
+      2.Each match has a 5 to 7-minute time limit, ensuring quick and intense gameplay.<br />
+      3.While laptops and controllers are provided, participants are welcome to bring their own equipment.<br />
+      <br />
+      EVENT FORMATION:<br />
+      Round 1- Teams compete in eliminator rounds until only two remain.  <br />
+      Round 2 - features a best-of-three format, where a team must win two out of three matches to emerge as the victor, while the other team takes the runner-up position. It's an opportunity for Rocket League enthusiasts to demonstrate their prowess and claim the title at CYBORGS 2K23.<br />
+      <br />
+      GAME 2:FIFA<br />
+      BASIC INSTRUCTIONS:<br />
+      1.Fifa will be conducted with Limited Slots with 36 Players.<br />
+      2.Matches will be a solo 1v1 .Teams can be present but will have to play individual and possibly against each other.<br />
+      3.Each match will be around 8 to 10 mins.Laptops and controller will be provided. If the participants are willing to bring their own laptops or controllers, well and gud.<br />
+      4.Prize will be awarded on team basis.If Players from the same team reach the finals then the first prize will be awarded to that team and the 3rd player’s team will receive the 2nd Prize.<br />
+      <br />
+      EVENT FORMATION:<br />
+      Round 1-This will be a knockout round.36 Players will go head to head in 1v1 matches.18 Players will advance to the next round.<br />
+      Round 2-Remaining  18 Players will go head to head in 1v1.Not only do they have to win the match but the objective would be score much goals as possible.The Goals of the winners of these matches will be calculated and Top 2 Leading Goal scorers will be advance to the final <br />
+      Round 3-It will be a final 1V1 match where winner takes all the glory and reward.</div>),
     round2: "Round 2:features a best-of-three format, where a team must win two out of three matches to emerge as the victor, while the other team takes the runner-up position. ",
     type: "Non-Technical",
     posterUrl: '/Posters/cyborgsleague.png',
@@ -76,7 +110,24 @@ const events = [
     title: "Cineaste",
     description: "Cinema is Art.Cinema Is Passion.Cinema Is Life.Calling all cinephiles to 'Cineaste', an audition where we review your film knowledge.",
     round: () => (
-      <div>“Cineaste” is an non- technical event. Step into the fascinating world of Kollywood and put your movie knowledge to the ultimate test with the thrilling Kollywood Quiz!  A thrilling movie quiz featuring questions from various genres, decades, and cultures.Multiple rounds of challenging questions, including audio and visual rounds.Engage in friendly competition with fellow cinephiles.Test your knowledge of famous actors, directors, film quotes, and more.",</div>),
+      <div>Team Rules :
+        <br />
+      1.Contestants need to form a team of minimum 2 members and a maximum of 3.<br />
+      2.All the participants must bring ID cards along with them.<br />
+      3.Contestants will have to use their theatrical knowledge and showcase their abilities through a series of various questions under different categories.<br />
+      <br />
+      Basic instructions:<br />
+      1.Multiple rounds of challenging questions, including audio and visual rounds.<br />
+      2.Participants should not indulge in any cheating activity and if found so, they will be disqualified. <br />
+      3.There is time limit for each question to answer.<br />
+      4.The decisions of judges will be final.<br />
+      5.All the Rounds will be conducted on 21 st october 2023.<br />
+      <br />
+      Event Instuctions:<br />
+      ROUND 1 :  Teams will have to connect the clues displayed to them in    the form of pictures and find the respective film.<br />
+      ROUND 2:  It consist of 2 phases, i: dumb charades ii: find the movie using  the given audio.<br />
+      ROUND 3: Find the film using the given frames.<br />
+      ROUND 4: Revealed during the day of event.</div>),
     round2: "Round 2: . It's an exciting opportunity for movie enthusiasts to demonstrate their passion and expertise.",
     type: "Non-Technical",
     posterUrl: '/Posters/cineaste.png',

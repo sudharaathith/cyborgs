@@ -46,7 +46,7 @@ function RegisterButton(props) {
         scale: 1,
         
       }}
-      href="https://forms.gle/LCG48PTf4GSunTTw5"
+      href="https://forms.gle/7SrbYJdiAnknXV5v8"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       animate={{ scale: 1 }}

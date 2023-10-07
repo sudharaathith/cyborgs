@@ -1,8 +1,8 @@
-import React, { useRef } from "react";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import Counter from "../Components/Counter";
 import TextChanger from "../Components/TextChanger";
-import uparraow from '../Image/uparrow.svg';
+
 import logo from "../Image/Text3.gif";
 import Footer from "../Components/Footer";
 import About from "../Components/About";
@@ -29,21 +29,16 @@ function Home() {
   ];
   const duration = 1000; // Animation duration in milliseconds
   const delay = 1000;
-  const ref = useRef(null);
-  const handleClick = () => {
-    ref.current.scrollIntoView({behavior: 'smooth'});
-  };
+  
   return (
     <div className="flex flex-col relative justify-items-center min-h-screen overflow-x-hidden ">
-      <div onClick={handleClick} className='uparrow'>
-        <a href='#home'><img src={uparraow} /></a>
-    </div>
+      
       <div style={{ height: `${Math.floor(window.innerHeight * 1.4)}px` }} id="home" />
       <motion.div className="m-auto text-white flex h-screen  overflow-x-hidden fixed" style={{ opacity }}>
         <div  className="mx-auto sm:my-auto max-sm:gap-6 flex flex-col ">
           <motion.div className=" fixed top-0 left-0 w-screen h-screen bg-black z-30 border-l" style={{ x }}  />
           <motion.div className=" fixed top-0 left-0 w-screen h-screen bg-black z-30 border-r" style={{ x: x2 }} />
-          <div ref={ref} className="cy_glich relative  flex flex-col">
+          <div  className="cy_glich relative  flex flex-col">
             <img 
               src={logo}
               className=" glich -z-40 mx-auto"

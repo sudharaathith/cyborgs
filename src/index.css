@@ -161,8 +161,27 @@
   scroll-behavior: smooth;
   }
 .uparrow img{
-  width:40px;
+  width:30px;
+  animation:animateDown 3s infinite ;
 }
+
+@keyframes animateDown {
+  0%, 20%, 50%, 80%, 100% 
+  {
+    transform: translateY(0);
+  }
+
+  40%{
+    transform:translateY(5px);
+  }
+
+  60%
+  {
+    transform : translateY(3px);
+  }
+}
+
+
 @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
   .navbar{
     display: none;
@@ -215,8 +234,6 @@
     /* background-color: #B2A9F1; */
     height:80vh;
     margin-top: 18vh;
-    /* display: none; */
-    /* background-color: #B2A9F1; */
   }
   .date{
     display:none;
@@ -243,7 +260,7 @@
 
 /* tap to scroll */
 .uparrow{
-  top:100vh;
+  top:90vh;
 }
 
 /* location */

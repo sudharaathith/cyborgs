@@ -5,13 +5,21 @@ import Background from "./Components/Background";
 import Hamburger from "./Components/Hamburger";
 import Taptoscroll from "./Components/Taptoscroll";
 import Scrolltotop from "./Components/Scrolltotop";
+import { useEffect } from "react";
+import uparraow from './Image/uparrow.svg';
 
 
 
 // import AboutSection from './Page/AboutSection';
 
 function App() {
-  // const location = useLocation();
+  const handleClick = () => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }
+
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, [])
   return (
     <div className="parent ">
       <Background>
@@ -22,7 +30,12 @@ function App() {
       </div> 
       {/* <Taptoscroll /> */}
       {/* <Scrolltotop /> */}
+      <div onClick={handleClick} className='uparrow'>
+        <a href='#home'><img src={uparraow} /></a>
+    </div>
+
     </div> 
+    
   
   );
 }

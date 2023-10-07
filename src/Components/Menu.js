@@ -3,16 +3,16 @@ export const ADDRESS = [
 ];
 
 export const NAME = [
-    {name:'Abraar' , link:"#"},
-    {name:'sandy', link:"#"}
+    {name:'Muthu Kiruba.B' , link:"#"},
+    {name:'Maanasa.R', link:"#"}
 ];
 
 export const EMAIL = [
-    {name: 'abraar@gmail.com', link:"#"},
-    {name: 'sandy@gmail.com', link:"#"}
+    {name: 'muthukiruba27@gmail.com', link:"#"},
+    {name: 'maanasaramamurthy@gmail.com', link:"#"}
 ]
 
 export const PHONENUMBER = [
-    {name:'8610837231', link:"#"},
-    {name:'4654651915', link:"#"}
+    {name:'9444859806', link:"#"},
+    {name:'9962500721', link:"#"}
 ]

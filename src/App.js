@@ -3,6 +3,9 @@ import "./App.css";
 import Home from "./Page/Home";
 import Background from "./Components/Background";
 import Hamburger from "./Components/Hamburger";
+import Taptoscroll from "./Components/Taptoscroll";
+import Scrolltotop from "./Components/Scrolltotop";
+
 
 
 // import AboutSection from './Page/AboutSection';
@@ -17,6 +20,8 @@ function App() {
       <div className="hamb_div">
         <Hamburger />
       </div> 
+      {/* <Taptoscroll /> */}
+      {/* <Scrolltotop /> */}
     </div> 
   
   );

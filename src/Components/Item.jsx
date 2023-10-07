@@ -3,11 +3,11 @@ import React from 'react'
 const Item = ({Links,title}) => {
   return (
     <div>
-        <ul>
-        <h1 className=' ml-10 text-violet-300  text-3xl font-[UnderStation]'>{title}</h1>
+        <ul className='contact_topics'>
+        <h1 className='heading  text-violet-300 sm:text-2xl text-xl font-[UnderStation]'>{title}</h1>
         {Links.map((Link)=>(
-            <li key={Link.name} className='ml-10'>
-                <a className='text-lg text-white '
+            <li key={Link.name} className='name'>
+                <a className='sm:text-lg text-md text-white '
                  href={Link.link}>{Link.name}</a>
             </li>
         ))}

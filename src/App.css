@@ -30,6 +30,11 @@
 
 }
 
+@font-face {
+  font-family: rough;
+  src: url('/fonts/rough.ttf');
+}
+
 #root{
   width: 100vw;
   overflow-x: hidden;

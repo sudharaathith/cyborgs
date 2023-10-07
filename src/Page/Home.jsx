@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Counter from "../Components/Counter";
 import TextChanger from "../Components/TextChanger";
-
+import uparraow from '../Image/uparrow.svg';
 import logo from "../Image/Text3.gif";
 import Footer from "../Components/Footer";
 import About from "../Components/About";
 import Card from "../Components/Card";
 import Location from "../Components/Location";
 import GlitchText from "../Components/GlitchText";
+
 
 function Home() {
   const { scrollY } = useScroll();
@@ -17,32 +18,59 @@ function Home() {
   const opacity = useTransform(scrollY, [window.innerHeight * 1, window.innerHeight * 1.1], [1, 0]);
   const opacity1 = useTransform(scrollY, [window.innerHeight * 1.1, window.innerHeight * 1.2], [0, 1]);
   const textArray = [
-    "By Department of Computer Science",
-    "A Computer Science Symposium"
+    "SRM Valliammai Engineering College",
+    "By the Department of Computer Science and Engineering",
+    "A National Level Technical Symposium 2K23"
+  ];
+  const textArray1 = [
+    "SRM Valliammai Engineering College",
+    "Department of Computer Science & Engineering",
+    // "A National Level Technical Symposium 2K23"
   ];
   const duration = 1000; // Animation duration in milliseconds
   const delay = 1000;
-
+  const ref = useRef(null);
+  const handleClick = () => {
+    ref.current?.scrollIntoView({behavior: 'smooth'});
+  };
   return (
     <div className="flex flex-col relative justify-items-center min-h-screen overflow-x-hidden ">
+      <div onClick={handleClick} className='uparrow'>
+        <a href='#home'><img src={uparraow} /></a>
+    </div>
       <div style={{ height: `${Math.floor(window.innerHeight * 1.4)}px` }} id="home" />
       <motion.div className="m-auto text-white flex h-screen  overflow-x-hidden fixed" style={{ opacity }}>
         <div  className="mx-auto sm:my-auto max-sm:gap-6 flex flex-col ">
           <motion.div className=" fixed top-0 left-0 w-screen h-screen bg-black z-30 border-l" style={{ x }}  />
           <motion.div className=" fixed top-0 left-0 w-screen h-screen bg-black z-30 border-r" style={{ x: x2 }} />
-          <div className=" max-sm:mt-52 flex flex-col">
+          <div ref={ref} className="cy_glich relative max-sm:mt-52 flex flex-col">
             <img 
               src={logo}
-              className=" sm:h-[30rem] -z-40 sm:mt-0 mx-auto"
+              className=" glich sm:h-[30rem] -z-40 sm:mt-0 mx-auto"
             />
-            <div>
+            <div className="cse_current">
               <TextChanger
-                className="mx-auto text-center -z-10 font-[] w-screen text-slate-200 font-semibold text-xl"
+                className="cse mx-auto text-center -z-10 font-[trigram] w-screen text-xl"
                 textArray={textArray}
                 duration={duration}
                 delay={delay}
               />
             </div>
+            <div className="info">
+    {/* By the Department of CSE<br /> */}
+              <TextChanger
+                className=""
+                textArray={textArray1}
+                duration={duration}
+                delay={delay}
+              />
+            </div>
+              <div className="date">
+                On October 21'st 2023
+              </div>
+              <div className="date1">
+              <span>A National Level Technical Symposium </span><br /> On October 21'st 2023
+              </div>
           </div>
         </div>
       </motion.div>

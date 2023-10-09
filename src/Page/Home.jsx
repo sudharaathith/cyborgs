@@ -9,6 +9,8 @@ import About from "../Components/About";
 import Card from "../Components/Card";
 import Location from "../Components/Location";
 import GlitchText from "../Components/GlitchText";
+import Note from "../Components/Note";
+import { useRef } from "react";
 
 
 function Home() {
@@ -30,9 +32,11 @@ function Home() {
   ];
   const duration = 1000; // Animation duration in milliseconds
   const delay = 1000;
+  const ref = useRef();
   
   return (
-    <div className="flex flex-col relative justify-items-center min-h-screen overflow-x-hidden ">
+    <main ref={ref} className="flex flex-col relative justify-items-center min-h-screen overflow-x-hidden ">
+      {/* <Note main={ref} /> */}
       
       <div style={{ height: `${Math.floor(window.innerHeight * 1.4)}px` }} id="home" />
       <motion.div className="m-auto text-white flex h-screen  overflow-x-hidden fixed" style={{ opacity }}>
@@ -85,7 +89,7 @@ function Home() {
       
       <Footer  />
   
-    </div>
+    </main>
   );
 }
 

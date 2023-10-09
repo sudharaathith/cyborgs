@@ -184,13 +184,6 @@ const Card = () => {
         <div className="grid justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-2 mt-40 lg:grid-cols-3 gap-16">
           {nonTechnicalEvents.map((event, id) => (
             <motion.div
-            drag
-            dragConstraints={{
-              top: -0,
-              left: -0,
-              right: 0,
-              bottom: 0,
-            }}
             initial={{ y: -100, opacity: 0 }}
             whileInView={{
               y: 0,
@@ -231,13 +224,6 @@ const Card = () => {
         <div className="grid justify-items-center mt-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 max-sm:gap-16">
           {technicalEvents.map((event, id) => (
             <motion.div
-            drag
-            dragConstraints={{
-              top: -0,
-              left: -0,
-              right: 0,
-              bottom: 0,
-            }}
             initial={{ y: -100, opacity: 0 }}
             whileInView={{
               y: 0,

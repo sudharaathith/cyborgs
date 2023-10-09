@@ -27,7 +27,7 @@ const TextChanger = ({ textArray, duration, className, delay=5000 }) => {
         }
       }
       r = t;
-      console.log(r)
+      // console.log(r)
       transition(textArray[r]);
     }, 5000);
     return () => {

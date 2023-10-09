@@ -40,7 +40,7 @@ const events = [
 
     round2: "Round 2: Live coding challenge on a real-world problem.",
     type: "Technical",
-    posterUrl:'/Posters/paperportico.png',
+    posterUrl:'/Posters/paperportico-min.png',
   },
   {
     id: 2,
@@ -71,7 +71,7 @@ const events = [
       4.The final clue in the chain will lead your team to a challenging problem hosted on platforms like HackerRank or CodeChef. Your team must work together to write code and pass all the test case<br /></div>),
     round2: "Round 2: 'Pseudo hunt,'' narrows it down to 5 teams. They answer questions to receive pseudocode clues, leading to the next step in a chain. The final clue guides teams to a coding challenge on platforms like HackerRank or CodeChef",
     type: "Technical",
-    posterUrl: '/Posters/codemystique.png',
+    posterUrl: '/Posters/codemystique-min.png',
   },
   {
     id: 4,
@@ -103,7 +103,7 @@ const events = [
       Round 3-It will be a final 1V1 match where winner takes all the glory and reward.</div>),
     round2: "Round 2:features a best-of-three format, where a team must win two out of three matches to emerge as the victor, while the other team takes the runner-up position. ",
     type: "Non-Technical",
-    posterUrl: '/Posters/cyborgsleague.png',
+    posterUrl: '/Posters/cyborgsleague-min.png',
   },
   {
     id: 5,
@@ -130,7 +130,7 @@ const events = [
       ROUND 4: Revealed during the day of event.</div>),
     round2: "Round 2: . It's an exciting opportunity for movie enthusiasts to demonstrate their passion and expertise.",
     type: "Non-Technical",
-    posterUrl: '/Posters/cineaste.png',
+    posterUrl: '/Posters/cineaste-min.png',
   },
 ];
 

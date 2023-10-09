@@ -36,7 +36,7 @@ function Home() {
   
   return (
     <main ref={ref} className="flex flex-col relative justify-items-center min-h-screen overflow-x-hidden ">
-      {/* <Note main={ref} /> */}
+      {/* <Note /> */}
       
       <div style={{ height: `${Math.floor(window.innerHeight * 1.4)}px` }} id="home" />
       <motion.div className="m-auto text-white flex h-screen  overflow-x-hidden fixed" style={{ opacity }}>

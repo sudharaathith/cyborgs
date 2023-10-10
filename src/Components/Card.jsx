@@ -41,6 +41,7 @@ const events = [
     round2: "Round 2: Live coding challenge on a real-world problem.",
     type: "Technical",
     posterUrl:'/Posters/paperportico-min.png',
+    contact: 'Vigneshwaran : +91 8610049633'
   },
   {
     id: 2,
@@ -51,6 +52,7 @@ const events = [
       Round 1: <br />20 contestants must vie for just 10 bunker spots by artfully persuading organizers of their unique qualifications, whether they excel in engineering, medicine, leadership, or problem-solving. <br /><br />Round 2<br /> introduces psychological trials, further pushing contestants to their limits. This event is an electrifying blend of strategic thinking, persuasive communication, and emotional resilience. To secure a coveted spot in the bunker, participants must not only demonstrate their practical prowess but also prove their mettle under intense psychological pressure, making it an unforgettable and thrilling experience."</div>),
     type: "Non-Technical",
     posterUrl: '/Posters/bunker.png',
+    contact: 'Vincent Prince : +91 9940531173',
   },
   {
     id: 3,
@@ -72,6 +74,7 @@ const events = [
     round2: "Round 2: 'Pseudo hunt,'' narrows it down to 5 teams. They answer questions to receive pseudocode clues, leading to the next step in a chain. The final clue guides teams to a coding challenge on platforms like HackerRank or CodeChef",
     type: "Technical",
     posterUrl: '/Posters/codemystique-min.png',
+    contact: 'Akshaya : +91 8248204760',
   },
   {
     id: 4,
@@ -104,6 +107,7 @@ const events = [
     round2: "Round 2:features a best-of-three format, where a team must win two out of three matches to emerge as the victor, while the other team takes the runner-up position. ",
     type: "Non-Technical",
     posterUrl: '/Posters/cyborgsleague-min.png',
+    contact: 'Allen Joshua : +91 9150657367',
   },
   {
     id: 5,
@@ -131,6 +135,7 @@ const events = [
     round2: "Round 2: . It's an exciting opportunity for movie enthusiasts to demonstrate their passion and expertise.",
     type: "Non-Technical",
     posterUrl: '/Posters/cineaste-min.png',
+    contact: 'Raja Ramanan : +91 9087990991',
   },
 ];
 

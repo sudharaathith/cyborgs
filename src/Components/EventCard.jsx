@@ -34,7 +34,7 @@ const EventCard = ({ onClose, event }) => {
             </button>
             <a
               className="text-white bg-blue-600 px-4 py-2 rounded-lg  hover:bg-blue-700 text-bold" 
-              href='https://forms.gle/LCG48PTf4GSunTTw5'
+              href='https://forms.gle/7SrbYJdiAnknXV5v8'
             >
               Register
             </a>

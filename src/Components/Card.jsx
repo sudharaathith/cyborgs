@@ -40,7 +40,7 @@ const events = [
 
     round2: "Round 2: Live coding challenge on a real-world problem.",
     type: "Technical",
-    posterUrl:'/Posters/paperportico-min.png',
+    posterUrl:'/Posters/paperportico-min.jpg',
     contact: 'Vigneshwaran : +91 8610049633'
   },
   {
@@ -51,7 +51,7 @@ const events = [
       <div>'CYBORGS 2K23: Survival Challenge - The Bunker Dilemma' immerses participants in a heart-pounding scenario where a nuclear threat looms.<br /><br />
       Round 1: <br />20 contestants must vie for just 10 bunker spots by artfully persuading organizers of their unique qualifications, whether they excel in engineering, medicine, leadership, or problem-solving. <br /><br />Round 2<br /> introduces psychological trials, further pushing contestants to their limits. This event is an electrifying blend of strategic thinking, persuasive communication, and emotional resilience. To secure a coveted spot in the bunker, participants must not only demonstrate their practical prowess but also prove their mettle under intense psychological pressure, making it an unforgettable and thrilling experience."</div>),
     type: "Non-Technical",
-    posterUrl: '/Posters/bunker.png',
+    posterUrl: '/Posters/bunker.jpg',
     contact: 'Vincent Prince : +91 9940531173',
   },
   {
@@ -73,7 +73,7 @@ const events = [
       4.The final clue in the chain will lead your team to a challenging problem hosted on platforms like HackerRank or CodeChef. Your team must work together to write code and pass all the test case<br /></div>),
     round2: "Round 2: 'Pseudo hunt,'' narrows it down to 5 teams. They answer questions to receive pseudocode clues, leading to the next step in a chain. The final clue guides teams to a coding challenge on platforms like HackerRank or CodeChef",
     type: "Technical",
-    posterUrl: '/Posters/codemystique-min.png',
+    posterUrl: '/Posters/codemystique-min.jpg',
     contact: 'Akshaya : +91 8248204760',
   },
   {
@@ -106,7 +106,7 @@ const events = [
       Round 3-It will be a final 1V1 match where winner takes all the glory and reward.</div>),
     round2: "Round 2:features a best-of-three format, where a team must win two out of three matches to emerge as the victor, while the other team takes the runner-up position. ",
     type: "Non-Technical",
-    posterUrl: '/Posters/cyborgsleague-min.png',
+    posterUrl: '/Posters/cyborgsleague-min.jpg',
     contact: 'Allen Joshua : +91 9150657367',
   },
   {
@@ -134,7 +134,7 @@ const events = [
       ROUND 4: Revealed during the day of event.</div>),
     round2: "Round 2: . It's an exciting opportunity for movie enthusiasts to demonstrate their passion and expertise.",
     type: "Non-Technical",
-    posterUrl: '/Posters/cineaste-min.png',
+    posterUrl: '/Posters/cineaste-min.jpg',
     contact: 'Raja Ramanan : +91 9087990991',
   },
 ];

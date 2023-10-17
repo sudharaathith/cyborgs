@@ -24,7 +24,7 @@ const events = [
     1.All topics related to recent trends and technologies are invited. <br />
     2.Mail your abstracts to cyborgs2k23@gmail.com on or before October 21. <br />
     3.The notification of acceptance of abstracts will be sent to you via mail <br />
-    4. The selected teams have to bring a soft copy of the paper in a CD/USB Device and 2 hard copies of the paper at the time of presentation.<br />
+    4. The selected teams have to bring a soft copy of the paper in a CD/USB Device and 1 hard copy of the paper at the time of presentation.<br />
     5.The decision of the judges and the event heads shall be treated as final. <br />
     6.No restrictions on presentation format <br />
     7.Copying from the internet is not encouraged. <br />
@@ -34,7 +34,7 @@ const events = [
     Presentation rules: <br />
     1.The paper submitted will have to be presented during the event. <br />
     2.Hard copies of the same are to be submitted before presentation to Judges <br />
-    3. The maximum duration of the presentation is 12 minutes <br />
+    3. The maximum duration of the presentation is 10 minutes <br />
     4. The participants will have to present their papers in MS PowerPoint (ppt) format only.
     </div>),
 
@@ -61,7 +61,7 @@ const events = [
     round: () => (
       <div>Code Mystique - CYBORGS 2K23 offers a technical group event with two exciting rounds.<br /><br />
       Round 1 - PuzzleFest:<br />
-      1.Each team will consist of three members.<br />
+      1.Each team will consist of 2-3 members.<br />
       2.Teams will be provided with three different puzzles to solve.<br />
       3.Work together to solve the puzzles.<br />
       4.There will be a set time limit for each round.<br />

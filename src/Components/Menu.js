@@ -14,5 +14,5 @@ export const EMAIL = [
 
 export const PHONENUMBER = [
     {name:'9444859806', link:"#"},
-    {name:'9962500721', link:"#"}
+    {name:'9962844176', link:"#"}
 ]
